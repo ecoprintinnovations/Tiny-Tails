@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" role="img" aria-labelledby="title desc">
+  <title id="title">Tiny Tails logo placeholder</title>
+  <desc id="desc">Placeholder logo graphic with Tiny Tails initials.</desc>
+  <rect width="400" height="200" fill="#333333" rx="24" ry="24" />
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'Comfortaa', cursive" font-size="72" fill="#FFB6C1">TT</text>
+</svg>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-labelledby="title desc">
+  <title id="title">Tiny Tails placeholder smallpet placeholder</title>
+  <desc id="desc">Placeholder illustration for Tiny Tails website gallery.</desc>
+  <rect width="600" height="400" fill="#FFE4EC" />
+  <rect x="40" y="40" width="520" height="320" rx="32" ry="32" fill="#ffffff" stroke="#FFB6C1" stroke-width="8" />
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="'Nunito', sans-serif" font-size="32" fill="#333333">
+    placeholder smallpet
+  </text>
+</svg>
