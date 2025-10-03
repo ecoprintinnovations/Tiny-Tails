@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Tiny Tails Pet Services, our mission, and the pet-loving team based in Cheshire, UK.">
+    <meta property="og:title" content="About Tiny Tails Pet Services">
+    <meta property="og:description" content="Discover the story and values behind Tiny Tails, a family-run pet care service in Cheshire, UK.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/pages/about.html">
+    <meta property="og:image" content="https://example.com/assets/img/hero/placeholder-hero.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Tiny Tails Pet Services">
+    <meta name="twitter:description" content="Meet the Tiny Tails team providing loving pet care in Cheshire, UK.">
+    <meta name="twitter:image" content="https://example.com/assets/img/hero/placeholder-hero.svg">
+    <title>About Us | Tiny Tails Pet Services</title>
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFB6C1',
+                        secondary: '#333333',
+                    }
+                }
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PetStore",
+      "name": "Tiny Tails Pet Services",
+      "image": "https://example.com/assets/img/hero/placeholder-hero.svg",
+      "@id": "https://example.com/",
+      "url": "https://example.com/",
+      "telephone": "+44 0000 000000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cheshire",
+        "addressLocality": "Cheshire",
+        "addressRegion": "Cheshire",
+        "postalCode": "CW1",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.1934,
+        "longitude": -2.8931
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
+      "priceRange": "££",
+      "description": "Family-run pet boarding, dog day care, and walking services in Cheshire, UK."
+    }
+    </script>
+    <script defer src="/assets/js/main.js"></script>
+</head>
+<body class="bg-white text-secondary">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="logo flex items-center">
+                    <span class="text-2xl font-bold text-primary">Tiny</span>
+                    <span class="text-2xl font-bold text-secondary">Tails</span>
+                </div>
+                <nav class="hidden md:flex space-x-8" aria-label="Primary">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/pages/about.html" class="nav-link active">About Us</a>
+                    <a href="/pages/services.html" class="nav-link">Services</a>
+                    <a href="/pages/shop.html" class="nav-link">Pet Shop</a>
+                    <a href="/pages/gallery.html" class="nav-link">Gallery</a>
+                    <a href="/pages/blog.html" class="nav-link">Blog</a>
+                    <a href="/pages/contact.html" class="nav-link">Contact</a>
+                </nav>
+                <button class="md:hidden focus:outline-none" aria-label="Toggle navigation" data-menu-toggle>
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+            <div class="md:hidden mt-3 hidden flex-col space-y-2" id="mobile-menu">
+                <a href="/" class="mobile-nav-link">Home</a>
+                <a href="/pages/about.html" class="mobile-nav-link">About Us</a>
+                <a href="/pages/services.html" class="mobile-nav-link">Services</a>
+                <a href="/pages/shop.html" class="mobile-nav-link">Pet Shop</a>
+                <a href="/pages/gallery.html" class="mobile-nav-link">Gallery</a>
+                <a href="/pages/blog.html" class="mobile-nav-link">Blog</a>
+                <a href="/pages/contact.html" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-gray-50 py-16">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl font-bold text-secondary mb-4">About Tiny Tails</h1>
+                <p class="text-lg mb-6 max-w-3xl">Tiny Tails Pet Services is a family of lifelong animal lovers committed to creating a safe, nurturing, and enriching environment for every pet that comes through our door.</p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <article class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-semibold mb-3">Our Story</h2>
+                        <p class="mb-4">Starting from a single foster dog in our Cheshire home, Tiny Tails has grown into a trusted local hub for pet guardians seeking reliable care. TODO: Add detailed founding story and milestones.</p>
+                        <p>We believe in positive reinforcement, compassionate handling, and transparent communication with every family we support.</p>
+                    </article>
+                    <article class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-2xl font-semibold mb-3">Meet the Team</h2>
+                        <ul class="space-y-3">
+                            <li><strong>Amelia</strong> – Lead Carer &amp; Behaviour Enthusiast. TODO: Add bio and qualifications.</li>
+                            <li><strong>Liam</strong> – Outdoor Adventure Specialist. TODO: Add bio and first-aid certifications.</li>
+                            <li><strong>Maya</strong> – Nutrition &amp; Enrichment Coordinator. TODO: Add bio and favourite recipes.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-xl font-semibold mb-2">Our Values</h2>
+                        <p>TODO: Expand on sustainability, community impact, and ethical sourcing policies.</p>
+                    </article>
+                    <article class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-xl font-semibold mb-2">Licensing &amp; Insurance</h2>
+                        <p>We are licensed by Cheshire East Council and maintain comprehensive insurance. TODO: Upload license details and policy numbers.</p>
+                    </article>
+                    <article class="bg-white p-6 rounded-lg shadow-sm">
+                        <h2 class="text-xl font-semibold mb-2">Community</h2>
+                        <p>We support local rescues and host monthly meetups for pet parents. TODO: Add calendar and partner organisations.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-secondary text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tiny Tails</h3>
+                    <p class="mb-4">Family-run pet care services with love and sustainability at our heart.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Facebook"><i data-feather="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" aria-label="Instagram"><i data-feather="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" aria-label="Twitter"><i data-feather="twitter" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="hover:text-primary">Home</a></li>
+                        <li><a href="/pages/about.html" class="hover:text-primary">About Us</a></li>
+                        <li><a href="/pages/services.html" class="hover:text-primary">Services</a></li>
+                        <li><a href="/pages/shop.html" class="hover:text-primary">Pet Shop</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Policies</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-primary">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-primary">Terms &amp; Conditions</a></li>
+                        <li><a href="#" class="hover:text-primary">Licensing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <p class="mb-2"><i data-feather="map-pin" class="inline mr-2 w-4 h-4"></i> Cheshire, UK</p>
+                    <p class="mb-2"><i data-feather="mail" class="inline mr-2 w-4 h-4"></i> <a href="mailto:hello@tinytails.co.uk" class="hover:text-primary">hello@tinytails.co.uk</a></p>
+                    <p><i data-feather="clock" class="inline mr-2 w-4 h-4"></i> Mon-Sun: 8am-8pm</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>© 2023 Tiny Tails Pet Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

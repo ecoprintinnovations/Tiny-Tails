@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Tiny Tails Hero Placeholder</title>
+  <desc id="desc">Illustration placeholder showing a heart and paw icon.</desc>
+  <rect width="1200" height="630" fill="#FFB6C1" />
+  <g fill="none" stroke="#333333" stroke-width="12">
+    <rect x="80" y="80" width="1040" height="470" rx="48" ry="48" opacity="0.35" />
+    <path d="M600 210c-70 0-126 52-126 116 0 108 126 214 126 214s126-106 126-214c0-64-56-116-126-116z" fill="#fff" opacity="0.6" />
+    <circle cx="540" cy="240" r="34" fill="#333333" />
+    <circle cx="660" cy="240" r="34" fill="#333333" />
+  </g>
+</svg>

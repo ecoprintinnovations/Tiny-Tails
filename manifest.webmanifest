@@ -1,0 +1,21 @@
+{
+  "name": "Tiny Tails Pet Services",
+  "short_name": "Tiny Tails",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#FFB6C1",
+  "theme_color": "#333333",
+  "icons": [
+    {
+      "src": "/static/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/assets/img/logos/placeholder-logo.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

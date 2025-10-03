@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Tiny Tails Pet Services offerings including home boarding, dog day care, and walking packages in Cheshire, UK.">
+    <meta property="og:title" content="Services | Tiny Tails Pet Services">
+    <meta property="og:description" content="Browse Tiny Tails' trusted boarding, day care, and walking services for pets in Cheshire, UK.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/pages/services.html">
+    <meta property="og:image" content="https://example.com/assets/img/hero/placeholder-hero.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Services | Tiny Tails">
+    <meta name="twitter:description" content="Tailored pet care services for dogs, cats, and small animals in Cheshire, UK.">
+    <meta name="twitter:image" content="https://example.com/assets/img/hero/placeholder-hero.svg">
+    <title>Services | Tiny Tails Pet Services</title>
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFB6C1',
+                        secondary: '#333333',
+                    }
+                }
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PetStore",
+      "name": "Tiny Tails Pet Services",
+      "image": "https://example.com/assets/img/hero/placeholder-hero.svg",
+      "@id": "https://example.com/",
+      "url": "https://example.com/",
+      "telephone": "+44 0000 000000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cheshire",
+        "addressLocality": "Cheshire",
+        "addressRegion": "Cheshire",
+        "postalCode": "CW1",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.1934,
+        "longitude": -2.8931
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
+      "priceRange": "££",
+      "description": "Family-run pet boarding, dog day care, and walking services in Cheshire, UK."
+    }
+    </script>
+    <script defer src="/assets/js/main.js"></script>
+</head>
+<body class="bg-white text-secondary">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="logo flex items-center">
+                    <span class="text-2xl font-bold text-primary">Tiny</span>
+                    <span class="text-2xl font-bold text-secondary">Tails</span>
+                </div>
+                <nav class="hidden md:flex space-x-8" aria-label="Primary">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/pages/about.html" class="nav-link">About Us</a>
+                    <a href="/pages/services.html" class="nav-link active">Services</a>
+                    <a href="/pages/shop.html" class="nav-link">Pet Shop</a>
+                    <a href="/pages/gallery.html" class="nav-link">Gallery</a>
+                    <a href="/pages/blog.html" class="nav-link">Blog</a>
+                    <a href="/pages/contact.html" class="nav-link">Contact</a>
+                </nav>
+                <button class="md:hidden focus:outline-none" aria-label="Toggle navigation" data-menu-toggle>
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+            <div class="md:hidden mt-3 hidden flex-col space-y-2" id="mobile-menu">
+                <a href="/" class="mobile-nav-link">Home</a>
+                <a href="/pages/about.html" class="mobile-nav-link">About Us</a>
+                <a href="/pages/services.html" class="mobile-nav-link">Services</a>
+                <a href="/pages/shop.html" class="mobile-nav-link">Pet Shop</a>
+                <a href="/pages/gallery.html" class="mobile-nav-link">Gallery</a>
+                <a href="/pages/blog.html" class="mobile-nav-link">Blog</a>
+                <a href="/pages/contact.html" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-gray-50 py-16">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl font-bold text-secondary mb-4">Our Pet Care Services</h1>
+                <p class="text-lg mb-6 max-w-3xl">From weekend boarding to daily enrichment visits, Tiny Tails provides flexible care options that keep pets content and families informed.</p>
+                <div class="grid gap-8 md:grid-cols-3">
+                    <article class="service-card">
+                        <h2 class="text-2xl font-semibold mb-2">Home Boarding</h2>
+                        <p class="mb-4">Comfortable overnight stays with 24/7 supervision, cosy sleeping areas, and daily photo updates. TODO: Add seasonal pricing tiers.</p>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Tailored routines</li>
+                            <li>Secure, fenced garden</li>
+                            <li>Medication administration</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <h2 class="text-2xl font-semibold mb-2">Dog Day Care</h2>
+                        <p class="mb-4">Structured play sessions, rest breaks, and socialisation in small, temperament-matched groups. TODO: Add enrolment criteria.</p>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>Morning &amp; afternoon check-ins</li>
+                            <li>Enrichment games</li>
+                            <li>Eco-friendly cleaning supplies</li>
+                        </ul>
+                    </article>
+                    <article class="service-card">
+                        <h2 class="text-2xl font-semibold mb-2">Adventure Walks</h2>
+                        <p class="mb-4">Scenic countryside walks tailored to your dog's pace, with GPS tracking and weather-safe gear. TODO: Add route map downloads.</p>
+                        <ul class="list-disc list-inside space-y-1">
+                            <li>1:4 walker-to-dog ratio</li>
+                            <li>Fully insured transport</li>
+                            <li>Paw wash before drop-off</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-secondary mb-6">Packages &amp; Pricing</h2>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full table-auto">
+                        <caption class="sr-only">Tiny Tails service packages and pricing</caption>
+                        <thead class="bg-secondary text-white">
+                            <tr>
+                                <th scope="col" class="px-4 py-3 text-left">Service</th>
+                                <th scope="col" class="px-4 py-3 text-left">Includes</th>
+                                <th scope="col" class="px-4 py-3 text-left">Starting Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="odd:bg-white even:bg-gray-50">
+                                <td class="px-4 py-3 font-semibold">Weekend Retreat</td>
+                                <td class="px-4 py-3">2 nights boarding, daily enrichment, complimentary bath. TODO: Confirm seasonal rates.</td>
+                                <td class="px-4 py-3">£95</td>
+                            </tr>
+                            <tr class="odd:bg-white even:bg-gray-50">
+                                <td class="px-4 py-3 font-semibold">Busy Bee Day Care</td>
+                                <td class="px-4 py-3">9am-5pm supervision, walks, enrichment activities. TODO: Add sibling discount details.</td>
+                                <td class="px-4 py-3">£32</td>
+                            </tr>
+                            <tr class="odd:bg-white even:bg-gray-50">
+                                <td class="px-4 py-3 font-semibold">Explorer Walk</td>
+                                <td class="px-4 py-3">60-minute adventure walk, GPS route share, paw clean. TODO: Add mileage surcharge info.</td>
+                                <td class="px-4 py-3">£18</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-primary text-secondary py-16">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2 class="text-3xl font-bold mb-4">How We Work</h2>
+                        <ol class="list-decimal list-inside space-y-2">
+                            <li>Book a meet-and-greet to discuss your pet's routine. TODO: Link to booking tool.</li>
+                            <li>Complete our care profile and vet release forms.</li>
+                            <li>Receive regular updates and share feedback via our pet parent portal.</li>
+                        </ol>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h3 class="text-2xl font-semibold mb-3">Need Something Custom?</h3>
+                        <p class="mb-4">We tailor care plans for senior pets, puppies, and animals with medical needs. TODO: Add case studies or testimonials.</p>
+                        <a href="/pages/contact.html" class="btn-secondary">Request a Quote</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-secondary text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tiny Tails</h3>
+                    <p class="mb-4">Family-run pet care services with love and sustainability at our heart.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Facebook"><i data-feather="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" aria-label="Instagram"><i data-feather="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" aria-label="Twitter"><i data-feather="twitter" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="hover:text-primary">Home</a></li>
+                        <li><a href="/pages/about.html" class="hover:text-primary">About Us</a></li>
+                        <li><a href="/pages/services.html" class="hover:text-primary">Services</a></li>
+                        <li><a href="/pages/shop.html" class="hover:text-primary">Pet Shop</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Policies</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-primary">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-primary">Terms &amp; Conditions</a></li>
+                        <li><a href="#" class="hover:text-primary">Licensing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <p class="mb-2"><i data-feather="map-pin" class="inline mr-2 w-4 h-4"></i> Cheshire, UK</p>
+                    <p class="mb-2"><i data-feather="mail" class="inline mr-2 w-4 h-4"></i> <a href="mailto:hello@tinytails.co.uk" class="hover:text-primary">hello@tinytails.co.uk</a></p>
+                    <p><i data-feather="clock" class="inline mr-2 w-4 h-4"></i> Mon-Sun: 8am-8pm</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>© 2023 Tiny Tails Pet Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

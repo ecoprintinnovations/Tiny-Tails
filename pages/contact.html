@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Tiny Tails Pet Services in Cheshire, UK to book boarding, day care, or walking for your pet.">
+    <meta property="og:title" content="Contact | Tiny Tails">
+    <meta property="og:description" content="Get in touch with Tiny Tails Pet Services to plan tailored care for your pet.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/pages/contact.html">
+    <meta property="og:image" content="https://example.com/assets/img/hero/placeholder-hero.svg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact | Tiny Tails">
+    <meta name="twitter:description" content="Reach Tiny Tails Pet Services for bookings, questions, and meet-and-greets.">
+    <meta name="twitter:image" content="https://example.com/assets/img/hero/placeholder-hero.svg">
+    <title>Contact | Tiny Tails Pet Services</title>
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFB6C1',
+                        secondary: '#333333',
+                    }
+                }
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PetStore",
+      "name": "Tiny Tails Pet Services",
+      "image": "https://example.com/assets/img/hero/placeholder-hero.svg",
+      "@id": "https://example.com/",
+      "url": "https://example.com/",
+      "telephone": "+44 0000 000000",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Cheshire",
+        "addressLocality": "Cheshire",
+        "addressRegion": "Cheshire",
+        "postalCode": "CW1",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 53.1934,
+        "longitude": -2.8931
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "08:00",
+          "closes": "20:00"
+        }
+      ],
+      "priceRange": "££",
+      "description": "Family-run pet boarding, dog day care, and walking services in Cheshire, UK."
+    }
+    </script>
+    <script defer src="/assets/js/main.js"></script>
+</head>
+<body class="bg-white text-secondary">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex items-center justify-between">
+                <div class="logo flex items-center">
+                    <span class="text-2xl font-bold text-primary">Tiny</span>
+                    <span class="text-2xl font-bold text-secondary">Tails</span>
+                </div>
+                <nav class="hidden md:flex space-x-8" aria-label="Primary">
+                    <a href="/" class="nav-link">Home</a>
+                    <a href="/pages/about.html" class="nav-link">About Us</a>
+                    <a href="/pages/services.html" class="nav-link">Services</a>
+                    <a href="/pages/shop.html" class="nav-link">Pet Shop</a>
+                    <a href="/pages/gallery.html" class="nav-link">Gallery</a>
+                    <a href="/pages/blog.html" class="nav-link">Blog</a>
+                    <a href="/pages/contact.html" class="nav-link active">Contact</a>
+                </nav>
+                <button class="md:hidden focus:outline-none" aria-label="Toggle navigation" data-menu-toggle>
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+            <div class="md:hidden mt-3 hidden flex-col space-y-2" id="mobile-menu">
+                <a href="/" class="mobile-nav-link">Home</a>
+                <a href="/pages/about.html" class="mobile-nav-link">About Us</a>
+                <a href="/pages/services.html" class="mobile-nav-link">Services</a>
+                <a href="/pages/shop.html" class="mobile-nav-link">Pet Shop</a>
+                <a href="/pages/gallery.html" class="mobile-nav-link">Gallery</a>
+                <a href="/pages/blog.html" class="mobile-nav-link">Blog</a>
+                <a href="/pages/contact.html" class="mobile-nav-link">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-gray-50 py-16">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl font-bold text-secondary mb-4">Contact Tiny Tails</h1>
+                <p class="text-lg mb-6 max-w-3xl">We would love to learn more about your pet's needs. Complete the form and we'll reply within one business day. TODO: Replace endpoint with production handler.</p>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <form id="contact-form" action="https://example.com/api/contact" method="POST" novalidate class="bg-white p-6 rounded-lg shadow-sm space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-1">Your Name</label>
+                            <input type="text" id="name" name="name" required class="form-input" autocomplete="name">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                            <input type="email" id="email" name="email" required class="form-input" autocomplete="email">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium mb-1">Phone</label>
+                            <input type="tel" id="phone" name="phone" class="form-input" autocomplete="tel">
+                        </div>
+                        <div>
+                            <label for="pet-details" class="block text-sm font-medium mb-1">Pet Details</label>
+                            <textarea id="pet-details" name="petDetails" rows="3" required class="form-input"></textarea>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                            <textarea id="message" name="message" rows="4" required class="form-input"></textarea>
+                        </div>
+                        <p class="text-sm text-gray-600">By submitting you agree to our <a href="#" class="underline">privacy policy</a>. TODO: Link to policy page.</p>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                        <p id="form-feedback" role="status" class="text-sm"></p>
+                    </form>
+                    <div class="space-y-6">
+                        <div>
+                            <h2 class="text-2xl font-semibold mb-2">Visit Us</h2>
+                            <p>Cheshire, UK<br>By appointment only</p>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-semibold mb-2">Call or Email</h2>
+                            <p><a href="tel:+440000000000" class="hover:text-primary">+44 0000 000000</a><br><a href="mailto:hello@tinytails.co.uk" class="hover:text-primary">hello@tinytails.co.uk</a></p>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-semibold mb-2">Hours</h2>
+                            <p>Monday - Sunday<br>08:00 - 20:00</p>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow-sm">
+                            <h3 class="text-xl font-semibold mb-2">Accessibility</h3>
+                            <p class="text-sm">Our home-based setup features step-free access and quiet rest areas. TODO: Add full accessibility statement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="bg-primary text-secondary p-6 rounded-lg">
+                    <h2 class="text-3xl font-bold mb-4">Join Our Newsletter</h2>
+                    <p class="mb-4">Be the first to know about upcoming availability, seasonal offers, and training workshops.</p>
+                    <form class="flex flex-col sm:flex-row gap-4" action="https://example.com/api/newsletter" method="POST">
+                        <label for="newsletter-email" class="sr-only">Email address</label>
+                        <input type="email" id="newsletter-email" name="email" required class="form-input sm:flex-1" placeholder="Email address">
+                        <button type="submit" class="btn-secondary">Subscribe</button>
+                    </form>
+                    <p class="text-xs mt-2">We send one update per month. Unsubscribe anytime.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-secondary text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tiny Tails</h3>
+                    <p class="mb-4">Family-run pet care services with love and sustainability at our heart.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Facebook"><i data-feather="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" aria-label="Instagram"><i data-feather="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" aria-label="Twitter"><i data-feather="twitter" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="hover:text-primary">Home</a></li>
+                        <li><a href="/pages/about.html" class="hover:text-primary">About Us</a></li>
+                        <li><a href="/pages/services.html" class="hover:text-primary">Services</a></li>
+                        <li><a href="/pages/shop.html" class="hover:text-primary">Pet Shop</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Policies</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-primary">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-primary">Terms &amp; Conditions</a></li>
+                        <li><a href="#" class="hover:text-primary">Licensing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <p class="mb-2"><i data-feather="map-pin" class="inline mr-2 w-4 h-4"></i> Cheshire, UK</p>
+                    <p class="mb-2"><i data-feather="mail" class="inline mr-2 w-4 h-4"></i> <a href="mailto:hello@tinytails.co.uk" class="hover:text-primary">hello@tinytails.co.uk</a></p>
+                    <p><i data-feather="clock" class="inline mr-2 w-4 h-4"></i> Mon-Sun: 8am-8pm</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>© 2023 Tiny Tails Pet Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        feather.replace();
+    </script>
+</body>
+</html>

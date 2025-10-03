@@ -1,0 +1,144 @@
+:root {
+  color-scheme: light;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.nav-link,
+.mobile-nav-link {
+  color: #333333;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.mobile-nav-link:hover,
+.nav-link:focus,
+.mobile-nav-link:focus {
+  color: #FFB6C1;
+  outline: none;
+}
+
+.nav-link.active {
+  color: #FFB6C1;
+}
+
+#mobile-menu a {
+  padding: 0.5rem 0;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  background-color: #FFB6C1;
+  color: #ffffff;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #ff9bb0;
+  color: #ffffff;
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.75rem;
+  border-radius: 9999px;
+  background-color: #333333;
+  color: #ffffff;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #4a4a4a;
+  color: #ffffff;
+}
+
+.btn-link {
+  color: #333333;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.btn-link:hover,
+.btn-link:focus {
+  color: #FFB6C1;
+}
+
+.service-card,
+.shop-card,
+.blog-card,
+.gallery-card {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover,
+.shop-card:hover,
+.blog-card:hover,
+.gallery-card:hover,
+.service-card:focus-within,
+.shop-card:focus-within,
+.blog-card:focus-within,
+.gallery-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.75rem;
+  background-color: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-input:focus {
+  border-color: #FFB6C1;
+  box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.4);
+  outline: none;
+}
+
+.table-auto th,
+.table-auto td {
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.hero-image button,
+.hero-image a {
+  font-weight: 700;
+}
+
+footer a:hover,
+footer a:focus {
+  color: #FFB6C1;
+}
+
+#form-feedback {
+  min-height: 1.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
