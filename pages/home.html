@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Tiny Tails Pet Services offers licensed home boarding, day care, and walking for pets across Cheshire, UK.">
+    <meta property="og:title" content="Tiny Tails Pet Services">
+    <meta property="og:description" content="Safe, loving care for your pets from a family-run, eco-friendly team in Cheshire, UK.">
+    <meta property="og:type" content="website">
+    <!-- TODO: Replace SITE_URL placeholder with production domain -->
+    <link rel="canonical" href="https://SITE_URL_TODO/">
+    <meta property="og:url" content="https://SITE_URL_TODO/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tiny Tails Pet Services">
+    <meta name="twitter:description" content="Family-run pet care services with eco-friendly values.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
+    <!-- Note: configure full CSP headers at the hosting layer for production deployments. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://SITE_URL_TODO https://images.unsplash.com https://plus.unsplash.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' https://cdn.tailwindcss.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com; connect-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <title>Tiny Tails Pet Services | Home</title>
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&family=Nunito:wght@200;300;400;500&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&family=Nunito:wght@200;300;400;500&display=swap">
+    </noscript>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script>
+        tailwind = window.tailwind || {};
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFB6C1',
+                        secondary: '#333333',
+                    }
+                }
+            }
+        };
+    </script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
+    <style>
+        :root {
+            --tt-primary: #FFB6C1;
+            --tt-secondary: #333333;
+        }
+        body {
+            font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: var(--tt-secondary);
+        }
+        .logo {
+            font-family: 'Comfortaa', cursive;
+        }
+        .hero {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+            z-index: 1;
+        }
+        .hero__media {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero__content {
+            position: relative;
+            z-index: 2;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "additionalType": "https://schema.org/PetService",
+      "name": "Tiny Tails Pet Services",
+      "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1200&q=80",
+      "@id": "https://SITE_URL_TODO/",
+      "url": "https://SITE_URL_TODO/",
+      "telephone": "+44 TODO-UPDATE-NUMBER",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "TODO: Update street address",
+        "addressLocality": "Cheshire",
+        "addressRegion": "Cheshire",
+        "postalCode": "TODO: Update postcode",
+        "addressCountry": "GB"
+      },
+      "geo": { "@type": "GeoCoordinates", "latitude": 53.1934, "longitude": -2.8931 },
+      "openingHoursSpecification": [{
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+          "opens": "08:00","closes": "20:00"
+      }],
+      "priceRange": "££",
+      "description": "Family-run pet boarding, dog day care, and walking services in Cheshire, UK.",
+      "sameAs": [
+        "https://www.facebook.com/TODO",
+        "https://www.instagram.com/TODO",
+        "https://www.twitter.com/TODO"
+      ]
+    }
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script defer src="/assets/js/main.js"></script>
+</head>
+<body class="bg-white">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header class="bg-white shadow-md sticky top-0 z-50" role="banner">
+        <div class="container mx-auto px-6 py-3 flex items-center justify-between" aria-label="Site header">
+            <div class="logo flex items-center text-secondary" aria-label="Tiny Tails logo">
+                <span class="text-2xl font-bold text-primary">Tiny</span>
+                <span class="text-2xl font-bold text-secondary">Tails</span>
+            </div>
+            <nav class="hidden md:flex space-x-8" aria-label="Primary">
+                <a href="/" class="nav-link" data-nav-active="true">Home</a>
+                <a href="/pages/about.html" class="nav-link">About Us</a>
+                <a href="/pages/services.html" class="nav-link">Services</a>
+                <a href="/pages/shop.html" class="nav-link">Pet Shop</a>
+                <a href="/pages/gallery.html" class="nav-link">Gallery</a>
+                <a href="/pages/blog.html" class="nav-link">Blog</a>
+                <a href="/pages/contact.html" class="nav-link">Contact</a>
+            </nav>
+            <button class="md:hidden nav-toggle" aria-label="Toggle navigation" aria-expanded="false" data-menu-toggle>
+                <i data-feather="menu" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="md:hidden border-t border-gray-100" data-mobile-menu-container>
+            <nav class="hidden flex-col space-y-2 px-6 py-3" id="mobile-menu" aria-label="Mobile primary">
+                <a href="/" class="mobile-nav-link" data-nav-active="true">Home</a>
+                <a href="/pages/about.html" class="mobile-nav-link">About Us</a>
+                <a href="/pages/services.html" class="mobile-nav-link">Services</a>
+                <a href="/pages/shop.html" class="mobile-nav-link">Pet Shop</a>
+                <a href="/pages/gallery.html" class="mobile-nav-link">Gallery</a>
+                <a href="/pages/blog.html" class="mobile-nav-link">Blog</a>
+                <a href="/pages/contact.html" class="mobile-nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" tabindex="-1">
+        <section class="hero py-24 md:py-32">
+            <picture>
+                <source srcset="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&amp;fit=crop&amp;w=1600&amp;q=80 1600w, https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80 1200w" sizes="100vw" media="(min-width: 768px)">
+                <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" srcset="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80 1200w, https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&amp;fit=crop&amp;w=800&amp;q=80 800w" sizes="100vw" alt="Happy dachshund relaxing on a cosy blanket" class="hero__media" loading="eager" decoding="async">
+            </picture>
+            <div class="container mx-auto px-6 text-center hero__content">
+                <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-4">Safe, Loving Care for Your Pets</h1>
+                <p class="text-xl text-secondary mb-8">Family-run, licensed UK pet boarding with eco-friendly values</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="/pages/contact.html" class="btn btn-primary">Book With Us</a>
+                    <a href="#services" class="btn btn-secondary">Explore Services</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white" aria-labelledby="about-heading">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-10">
+                    <div class="md:w-1/2" data-animate="fade-in">
+                        <h2 id="about-heading" class="text-3xl font-bold text-secondary mb-4">About Tiny Tails</h2>
+                        <p class="text-secondary mb-4">We're a family-run pet care service dedicated to providing your furry friends with the love and attention they deserve while you're away.</p>
+                        <p class="text-secondary mb-4">Our eco-friendly approach means we reuse packaging, choose sustainable products, and minimise our environmental pawprint.</p>
+                        <p class="text-secondary">Fully licensed and insured, with a safe, cosy environment where your pets will feel comfortable, safe, and happy.</p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <picture>
+                            <source srcset="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&amp;fit=crop&amp;w=1200&amp;q=80 1200w, https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&amp;fit=crop&amp;w=960&amp;q=80 960w" sizes="(min-width: 768px) 50vw, 100vw" media="(min-width: 768px)">
+                            <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&amp;fit=crop&amp;w=640&amp;q=80" srcset="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&amp;fit=crop&amp;w=960&amp;q=80 960w, https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&amp;fit=crop&amp;w=640&amp;q=80 640w" sizes="(min-width: 768px) 50vw, 100vw" alt="Two tabby kittens napping together on a blanket" class="rounded-lg shadow-lg w-full h-full object-cover" loading="lazy" decoding="async">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-50" id="services" aria-labelledby="services-heading">
+            <div class="container mx-auto px-6">
+                <h2 id="services-heading" class="text-3xl font-bold text-center text-secondary mb-12">Our Services</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <article class="service-card">
+                        <div class="text-primary mb-4" aria-hidden="true"><i data-feather="home" class="w-10 h-10"></i></div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">Home Boarding</h3>
+                        <p class="text-secondary">Cosy overnight stays with a calm, supervised environment and regular updates.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="text-primary mb-4" aria-hidden="true"><i data-feather="sun" class="w-10 h-10"></i></div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">Dog Day Care</h3>
+                        <p class="text-secondary">Daily activities and socialisation for your pup while you're at work or away for the day.</p>
+                    </article>
+                    <article class="service-card">
+                        <div class="text-primary mb-4" aria-hidden="true"><i data-feather="activity" class="w-10 h-10"></i></div>
+                        <h3 class="text-xl font-bold text-secondary mb-2">Dog Walking</h3>
+                        <p class="text-secondary">Local countryside walks with safe handling to keep your dog exercised and happy.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white" aria-labelledby="licensing-heading">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 id="licensing-heading" class="text-3xl font-bold text-secondary mb-4">Licensing &amp; Insurance</h2>
+                    <p class="text-secondary mb-4">TODO: Add licensing authority details, certificate numbers, and insurance provider summary.</p>
+                    <p class="text-secondary">Use this space to reassure pet parents about compliance and safeguarding processes.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-primary text-secondary" aria-labelledby="testimonials-heading">
+            <div class="container mx-auto px-6">
+                <h2 id="testimonials-heading" class="text-3xl font-bold text-center mb-12 text-secondary">Happy Tails</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <figure class="testimonial-card">
+                        <blockquote class="italic mb-4">"Our Labrador absolutely loves staying at Tiny Tails. We get daily updates and he comes home happy and tired!"</blockquote>
+                        <figcaption class="font-bold">- Sarah K.</figcaption>
+                    </figure>
+                    <figure class="testimonial-card">
+                        <blockquote class="italic mb-4">"Reliable, friendly, and genuinely caring. Highly recommend for boarding and day care."</blockquote>
+                        <figcaption class="font-bold">- Daniel R.</figcaption>
+                    </figure>
+                    <figure class="testimonial-card">
+                        <blockquote class="italic mb-4">"Great communication and a lovely home environment. Our spaniel settled straight away."</blockquote>
+                        <figcaption class="font-bold">- Priya M.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-white text-center" aria-labelledby="cta-heading">
+            <div class="container mx-auto px-6">
+                <h2 id="cta-heading" class="text-3xl font-bold text-secondary mb-4">Ready to Book?</h2>
+                <p class="text-xl text-secondary mb-8">Contact us today to arrange a meet-and-greet</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="tel:+44TODO-PHONE" class="btn btn-primary">Call Us <!-- TODO: Update phone number --></a>
+                    <a href="/pages/contact.html" class="btn btn-secondary">Send Message</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-secondary text-white py-12" role="contentinfo">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tiny Tails</h3>
+                    <p class="mb-4">Family-run pet care services with love and sustainability at our heart.</p>
+                    <div class="flex space-x-4" aria-label="Social media">
+                        <a href="https://www.facebook.com/TODO" aria-label="Facebook" class="link-inline"><i data-feather="facebook" class="w-5 h-5" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/TODO" aria-label="Instagram" class="link-inline"><i data-feather="instagram" class="w-5 h-5" aria-hidden="true"></i></a>
+                        <a href="https://www.twitter.com/TODO" aria-label="Twitter" class="link-inline"><i data-feather="twitter" class="w-5 h-5" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/" class="footer-link">Home</a></li>
+                        <li><a href="/pages/about.html" class="footer-link">About Us</a></li>
+                        <li><a href="/pages/services.html" class="footer-link">Services</a></li>
+                        <li><a href="/pages/shop.html" class="footer-link">Pet Shop</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Policies</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms &amp; Conditions</a></li>
+                        <li><a href="#" class="footer-link">Licensing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact</h3>
+                    <p class="mb-2"><i data-feather="map-pin" class="inline mr-2 w-4 h-4" aria-hidden="true"></i> TODO: Update address for print and online listings.</p>
+                    <p class="mb-2"><i data-feather="mail" class="inline mr-2 w-4 h-4" aria-hidden="true"></i> <a href="mailto:hello@tinytails.co.uk" class="footer-link">hello@tinytails.co.uk</a></p>
+                    <p><i data-feather="clock" class="inline mr-2 w-4 h-4" aria-hidden="true"></i> Mon-Sun: 8am-8pm</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p>© 2023 Tiny Tails Pet Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
