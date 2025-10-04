@@ -7,80 +7,153 @@ body {
   color: #333333;
 }
 
+a,
+button,
+input,
+textarea {
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(47, 13, 21, 0.6);
+  outline-offset: 2px;
+}
+
 .nav-link,
 .mobile-nav-link {
   color: #333333;
   font-weight: 600;
-  transition: color 0.2s ease;
+  position: relative;
+  padding: 0.25rem 0;
+}
+
+.nav-link::after,
+.mobile-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.2rem;
+  width: 0;
+  height: 2px;
+  background-color: #2f0d15;
+  transition: width 0.2s ease;
 }
 
 .nav-link:hover,
 .mobile-nav-link:hover,
-.nav-link:focus,
-.mobile-nav-link:focus {
-  color: #FFB6C1;
-  outline: none;
+.nav-link:focus-visible,
+.mobile-nav-link:focus-visible {
+  color: #2f0d15;
 }
 
-.nav-link.active {
-  color: #FFB6C1;
+.nav-link:hover::after,
+.mobile-nav-link:hover::after,
+.nav-link:focus-visible::after,
+.mobile-nav-link:focus-visible::after,
+.nav-link[data-nav-active="true"]::after,
+.mobile-nav-link[data-nav-active="true"]::after {
+  width: 100%;
+}
+
+.nav-toggle {
+  border: 2px solid transparent;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+}
+
+.nav-toggle:focus-visible {
+  border-color: rgba(47, 13, 21, 0.4);
 }
 
 #mobile-menu a {
   padding: 0.5rem 0;
 }
 
-.btn-primary {
+.btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.75rem 1.75rem;
   border-radius: 9999px;
-  background-color: #FFB6C1;
-  color: #ffffff;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  line-height: 1;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.75rem 1.5rem;
+  background: #333333;
+  color: #ffffff;
+  transform: translateY(-150%);
+  transition: transform 0.2s ease;
+  z-index: 100;
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+.btn-primary {
+  background-color: #ffb6c1;
+  color: #2f0d15;
+  border: 2px solid transparent;
 }
 
 .btn-primary:hover,
-.btn-primary:focus {
-  background-color: #ff9bb0;
-  color: #ffffff;
+.btn-primary:focus-visible {
+  background-color: #f590a8;
+  color: #2f0d15;
 }
 
 .btn-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem 1.75rem;
-  border-radius: 9999px;
   background-color: #333333;
   color: #ffffff;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .btn-secondary:hover,
-.btn-secondary:focus {
+.btn-secondary:focus-visible {
   background-color: #4a4a4a;
   color: #ffffff;
 }
 
-.btn-link {
-  color: #333333;
-  font-weight: 600;
-  text-decoration: underline;
+.btn-tertiary {
+  background-color: transparent;
+  color: #2f0d15;
+  border: 2px solid #2f0d15;
 }
 
-.btn-link:hover,
-.btn-link:focus {
-  color: #FFB6C1;
+.btn-tertiary:hover,
+.btn-tertiary:focus-visible {
+  background-color: rgba(47, 13, 21, 0.08);
+}
+
+.link-inline,
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.link-inline:hover,
+.footer-link:hover,
+.link-inline:focus-visible,
+.footer-link:focus-visible {
+  color: #ffdde5;
 }
 
 .service-card,
 .shop-card,
 .blog-card,
-.gallery-card {
+.gallery-card,
+.testimonial-card {
   background-color: #ffffff;
   border-radius: 0.75rem;
   padding: 1.5rem;
@@ -92,10 +165,12 @@ body {
 .shop-card:hover,
 .blog-card:hover,
 .gallery-card:hover,
+.testimonial-card:hover,
 .service-card:focus-within,
 .shop-card:focus-within,
 .blog-card:focus-within,
-.gallery-card:focus-within {
+.gallery-card:focus-within,
+.testimonial-card:focus-within {
   transform: translateY(-4px);
   box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
 }
@@ -109,10 +184,9 @@ body {
   transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.form-input:focus {
-  border-color: #FFB6C1;
-  box-shadow: 0 0 0 3px rgba(255, 182, 193, 0.4);
-  outline: none;
+.form-input:focus-visible {
+  border-color: #f590a8;
+  box-shadow: 0 0 0 3px rgba(245, 144, 168, 0.35);
 }
 
 .table-auto th,
@@ -120,18 +194,41 @@ body {
   border-bottom: 1px solid #e5e7eb;
 }
 
-.hero-image button,
-.hero-image a {
+#form-feedback {
+  min-height: 1.5rem;
+}
+
+.hero__content a {
   font-weight: 700;
 }
 
 footer a:hover,
-footer a:focus {
-  color: #FFB6C1;
+footer a:focus-visible {
+  color: #ffdde5;
 }
 
-#form-feedback {
-  min-height: 1.5rem;
+@media print {
+  body {
+    color: #000000;
+    font-size: 12pt;
+  }
+
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+  }
+
+  header,
+  footer,
+  nav,
+  button,
+  .btn {
+    display: none !important;
+  }
+
+  main {
+    padding: 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

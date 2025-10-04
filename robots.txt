@@ -1,4 +1,6 @@
+# Tiny Tails Pet Services robots.txt
+# TODO: Replace SITE_URL placeholder with production domain before launch.
 User-agent: *
 Allow: /
 
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://SITE_URL_TODO/sitemap.xml
