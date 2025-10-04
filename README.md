@@ -58,18 +58,24 @@ Tiny-Tails/
   - Body copy: [Nunito](https://fonts.google.com/specimen/Nunito)
   - Both loaded from Google Fonts via inline `@import` to match Tailwind utility classes.
 
-## Editing Content
+## Editing Content Safely
 
-- Update copy for each section by modifying the relevant HTML file inside `index.html` or `pages/`.
+- Update copy for each section by modifying the relevant HTML file inside `index.html` or `pages/`. Semantic landmarks (header, main, footer) and skip links should remain in place for accessibility.
 - Reusable utility classes and bespoke tweaks live in `assets/css/styles.css`. Tailwind is loaded via CDN, so additional classes can be applied directly in the markup.
-- JavaScript behaviours such as the mobile menu toggle, smooth scrolling, and contact form validation are handled in `assets/js/main.js`. Extend this file for any new interactions.
-- TODO markers are sprinkled throughout the pages as prompts for future content such as pricing details, testimonials, and policy links.
+- JavaScript behaviours such as the mobile menu toggle, smooth scrolling (with reduced-motion fallbacks), and contact form validation are handled in `assets/js/main.js`. Extend this file for any new interactions and keep everything framework-free.
+- TODO markers are sprinkled throughout the pages as prompts for future content such as pricing details, testimonials, licensing numbers, and policy links. Search for `TODO:` when updating business information.
 
-## Images & Media
+## Replacing Image Placeholders
 
-- Replace the SVG placeholders in `assets/img/hero/`, `assets/img/gallery/`, and `assets/img/logos/` with production-ready imagery. Keep filenames descriptive and update references if the names change.
-- Replace the placeholder SVG favicon in `static/favicon.svg` with a production-ready icon set (ICO/SVG/PNG) before launch to ensure browsers display the correct branding across devices.
-- Store any additional static assets (PDFs, downloads) under `assets/` in a logical subfolder.
+- All image references point to non-binary placeholder assets under `assets/img/`. Replace these SVG or text placeholders with production-ready artwork when available, keeping the same filenames where possible.
+- If you need additional imagery, add descriptive `.txt` or `.svg` placeholders and update the markup accordingly. Avoid committing binary formats (JPG/PNG) until final assets are approved.
+- Buttons and cards rely on proper `alt` text for accessibility. Ensure new media includes descriptive `alt` attributes or empty `alt` values for decorative items.
+
+## Configuring Canonical SITE_URL
+
+- Canonical links, Open Graph/Twitter tags, JSON-LD, `robots.txt`, and `sitemap.xml` currently reference `https://SITE_URL_TODO/`.
+- After deployment, replace `SITE_URL_TODO` with the live domain in **all** files (HTML pages, sitemap, and robots).
+- Update any `TODO` comments adjacent to telephone numbers, addresses, and licensing statements as part of the go-live checklist.
 
 ## Deployment
 

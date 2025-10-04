@@ -1,24 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<!-- TODO: Replace SITE_URL placeholder with production domain before launch. -->
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://example.com/</loc>
+    <loc>https://SITE_URL_TODO/</loc>
   </url>
   <url>
-    <loc>https://example.com/pages/about.html</loc>
+    <loc>https://SITE_URL_TODO/pages/about.html</loc>
   </url>
   <url>
-    <loc>https://example.com/pages/services.html</loc>
+    <loc>https://SITE_URL_TODO/pages/services.html</loc>
   </url>
   <url>
-    <loc>https://example.com/pages/shop.html</loc>
+    <loc>https://SITE_URL_TODO/pages/shop.html</loc>
   </url>
   <url>
-    <loc>https://example.com/pages/gallery.html</loc>
+    <loc>https://SITE_URL_TODO/pages/gallery.html</loc>
   </url>
   <url>
-    <loc>https://example.com/pages/blog.html</loc>
+    <loc>https://SITE_URL_TODO/pages/blog.html</loc>
   </url>
   <url>
-    <loc>https://example.com/pages/contact.html</loc>
+    <loc>https://SITE_URL_TODO/pages/contact.html</loc>
   </url>
 </urlset>

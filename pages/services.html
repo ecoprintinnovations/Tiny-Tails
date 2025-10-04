@@ -7,19 +7,29 @@
     <meta property="og:title" content="Services | Tiny Tails Pet Services">
     <meta property="og:description" content="Browse Tiny Tails' trusted boarding, day care, and walking services for pets in Cheshire, UK.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://example.com/pages/services.html">
-    <meta property="og:image" content="https://example.com/assets/img/hero/placeholder-hero.svg">
+    <!-- TODO: Replace SITE_URL placeholder with production domain -->
+    <link rel="canonical" href="https://SITE_URL_TODO/pages/services.html">
+    <meta property="og:url" content="https://SITE_URL_TODO/pages/services.html">
+    <meta property="og:image" content="https://SITE_URL_TODO/assets/img/hero/placeholder-hero.svg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Services | Tiny Tails">
     <meta name="twitter:description" content="Tailored pet care services for dogs, cats, and small animals in Cheshire, UK.">
-    <meta name="twitter:image" content="https://example.com/assets/img/hero/placeholder-hero.svg">
+    <meta name="twitter:image" content="https://SITE_URL_TODO/assets/img/hero/placeholder-hero.svg">
+    <!-- Note: configure full CSP headers at the hosting layer for production deployments. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://SITE_URL_TODO; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' https://cdn.tailwindcss.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com; connect-src 'self';">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <title>Services | Tiny Tails Pet Services</title>
     <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
     <link rel="manifest" href="/manifest.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&family=Nunito:wght@200;300;400;500&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&family=Nunito:wght@200;300;400;500&display=swap">
+    </noscript>
     <link rel="stylesheet" href="/assets/css/styles.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
     <script>
+        tailwind = window.tailwind || {};
         tailwind.config = {
             theme: {
                 extend: {
@@ -29,86 +39,64 @@
                     }
                 }
             }
-        }
+        };
     </script>
+    <script src="https://cdn.tailwindcss.com" defer></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "PetStore",
-      "name": "Tiny Tails Pet Services",
-      "image": "https://example.com/assets/img/hero/placeholder-hero.svg",
-      "@id": "https://example.com/",
-      "url": "https://example.com/",
-      "telephone": "+44 0000 000000",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Cheshire",
-        "addressLocality": "Cheshire",
-        "addressRegion": "Cheshire",
-        "postalCode": "CW1",
-        "addressCountry": "GB"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 53.1934,
-        "longitude": -2.8931
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday",
-            "Sunday"
-          ],
-          "opens": "08:00",
-          "closes": "20:00"
-        }
-      ],
-      "priceRange": "££",
-      "description": "Family-run pet boarding, dog day care, and walking services in Cheshire, UK."
+      "@type": "WebPage",
+      "@id": "https://SITE_URL_TODO/pages/services.html",
+      "url": "https://SITE_URL_TODO/pages/services.html",
+      "name": "Tiny Tails Pet Services Offerings",
+      "description": "Explore boarding, day care, and walking services provided by Tiny Tails in Cheshire, UK.",
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://SITE_URL_TODO/"},
+          {"@type": "ListItem", "position": 2, "name": "Services", "item": "https://SITE_URL_TODO/pages/services.html"}
+        ]
+      }
     }
     </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <script defer src="/assets/js/main.js"></script>
 </head>
-<body class="bg-white text-secondary">
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-3">
-            <div class="flex items-center justify-between">
-                <div class="logo flex items-center">
-                    <span class="text-2xl font-bold text-primary">Tiny</span>
-                    <span class="text-2xl font-bold text-secondary">Tails</span>
-                </div>
-                <nav class="hidden md:flex space-x-8" aria-label="Primary">
-                    <a href="/" class="nav-link">Home</a>
-                    <a href="/pages/about.html" class="nav-link">About Us</a>
-                    <a href="/pages/services.html" class="nav-link active">Services</a>
-                    <a href="/pages/shop.html" class="nav-link">Pet Shop</a>
-                    <a href="/pages/gallery.html" class="nav-link">Gallery</a>
-                    <a href="/pages/blog.html" class="nav-link">Blog</a>
-                    <a href="/pages/contact.html" class="nav-link">Contact</a>
-                </nav>
-                <button class="md:hidden focus:outline-none" aria-label="Toggle navigation" data-menu-toggle>
-                    <i data-feather="menu"></i>
-                </button>
+<body class="bg-white">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <header class="bg-white shadow-md sticky top-0 z-50" role="banner">
+        <div class="container mx-auto px-6 py-3 flex items-center justify-between" aria-label="Site header">
+            <div class="logo flex items-center text-secondary" aria-label="Tiny Tails logo">
+                <span class="text-2xl font-bold text-primary">Tiny</span>
+                <span class="text-2xl font-bold text-secondary">Tails</span>
             </div>
-            <div class="md:hidden mt-3 hidden flex-col space-y-2" id="mobile-menu">
+            <nav class="hidden md:flex space-x-8" aria-label="Primary">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/pages/about.html" class="nav-link">About Us</a>
+                <a href="/pages/services.html" class="nav-link" data-nav-active="true">Services</a>
+                <a href="/pages/shop.html" class="nav-link">Pet Shop</a>
+                <a href="/pages/gallery.html" class="nav-link">Gallery</a>
+                <a href="/pages/blog.html" class="nav-link">Blog</a>
+                <a href="/pages/contact.html" class="nav-link">Contact</a>
+            </nav>
+            <button class="md:hidden nav-toggle" aria-label="Toggle navigation" aria-expanded="false" data-menu-toggle>
+                <i data-feather="menu" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="md:hidden border-t border-gray-100" data-mobile-menu-container>
+            <nav class="hidden flex-col space-y-2 px-6 py-3" id="mobile-menu" aria-label="Mobile primary">
                 <a href="/" class="mobile-nav-link">Home</a>
                 <a href="/pages/about.html" class="mobile-nav-link">About Us</a>
-                <a href="/pages/services.html" class="mobile-nav-link">Services</a>
+                <a href="/pages/services.html" class="mobile-nav-link" data-nav-active="true">Services</a>
                 <a href="/pages/shop.html" class="mobile-nav-link">Pet Shop</a>
                 <a href="/pages/gallery.html" class="mobile-nav-link">Gallery</a>
                 <a href="/pages/blog.html" class="mobile-nav-link">Blog</a>
                 <a href="/pages/contact.html" class="mobile-nav-link">Contact</a>
-            </div>
+            </nav>
         </div>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
         <section class="bg-gray-50 py-16">
             <div class="container mx-auto px-6">
                 <h1 class="text-4xl font-bold text-secondary mb-4">Our Pet Care Services</h1>
@@ -194,47 +182,47 @@
                     <div class="bg-white p-6 rounded-lg shadow-sm">
                         <h3 class="text-2xl font-semibold mb-3">Need Something Custom?</h3>
                         <p class="mb-4">We tailor care plans for senior pets, puppies, and animals with medical needs. TODO: Add case studies or testimonials.</p>
-                        <a href="/pages/contact.html" class="btn-secondary">Request a Quote</a>
+                        <a href="/pages/contact.html" class="btn btn-secondary">Request a Quote</a>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-secondary text-white py-12">
+    <footer class="bg-secondary text-white py-12" role="contentinfo">
         <div class="container mx-auto px-6">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">Tiny Tails</h3>
                     <p class="mb-4">Family-run pet care services with love and sustainability at our heart.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" aria-label="Facebook"><i data-feather="facebook" class="w-5 h-5"></i></a>
-                        <a href="#" aria-label="Instagram"><i data-feather="instagram" class="w-5 h-5"></i></a>
-                        <a href="#" aria-label="Twitter"><i data-feather="twitter" class="w-5 h-5"></i></a>
+                    <div class="flex space-x-4" aria-label="Social media">
+                        <a href="https://www.facebook.com/TODO" aria-label="Facebook" class="link-inline"><i data-feather="facebook" class="w-5 h-5" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/TODO" aria-label="Instagram" class="link-inline"><i data-feather="instagram" class="w-5 h-5" aria-hidden="true"></i></a>
+                        <a href="https://www.twitter.com/TODO" aria-label="Twitter" class="link-inline"><i data-feather="twitter" class="w-5 h-5" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="/" class="hover:text-primary">Home</a></li>
-                        <li><a href="/pages/about.html" class="hover:text-primary">About Us</a></li>
-                        <li><a href="/pages/services.html" class="hover:text-primary">Services</a></li>
-                        <li><a href="/pages/shop.html" class="hover:text-primary">Pet Shop</a></li>
+                        <li><a href="/" class="footer-link">Home</a></li>
+                        <li><a href="/pages/about.html" class="footer-link">About Us</a></li>
+                        <li><a href="/pages/services.html" class="footer-link">Services</a></li>
+                        <li><a href="/pages/shop.html" class="footer-link">Pet Shop</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Policies</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-primary">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-primary">Terms &amp; Conditions</a></li>
-                        <li><a href="#" class="hover:text-primary">Licensing</a></li>
+                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
+                        <li><a href="#" class="footer-link">Terms &amp; Conditions</a></li>
+                        <li><a href="#" class="footer-link">Licensing</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-xl font-bold mb-4">Contact</h3>
-                    <p class="mb-2"><i data-feather="map-pin" class="inline mr-2 w-4 h-4"></i> Cheshire, UK</p>
-                    <p class="mb-2"><i data-feather="mail" class="inline mr-2 w-4 h-4"></i> <a href="mailto:hello@tinytails.co.uk" class="hover:text-primary">hello@tinytails.co.uk</a></p>
-                    <p><i data-feather="clock" class="inline mr-2 w-4 h-4"></i> Mon-Sun: 8am-8pm</p>
+                    <p class="mb-2"><i data-feather="map-pin" class="inline mr-2 w-4 h-4" aria-hidden="true"></i> TODO: Update address for print and online listings.</p>
+                    <p class="mb-2"><i data-feather="mail" class="inline mr-2 w-4 h-4" aria-hidden="true"></i> <a href="mailto:hello@tinytails.co.uk" class="footer-link">hello@tinytails.co.uk</a></p>
+                    <p><i data-feather="clock" class="inline mr-2 w-4 h-4" aria-hidden="true"></i> Mon-Sun: 8am-8pm</p>
                 </div>
             </div>
             <div class="border-t border-gray-700 mt-8 pt-8 text-center">
@@ -242,8 +230,5 @@
             </div>
         </div>
     </footer>
-    <script>
-        feather.replace();
-    </script>
 </body>
 </html>
