@@ -3,299 +3,2167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Tiny Tails Pet Services offers licensed home boarding, day care, and walking for pets across Cheshire, UK.">
-    <meta property="og:title" content="Tiny Tails Pet Services">
-    <meta property="og:description" content="Safe, loving care for your pets from a family-run, eco-friendly team in Cheshire, UK.">
-    <meta property="og:type" content="website">
-    <!-- TODO: Replace SITE_URL placeholder with production domain -->
-    <link rel="canonical" href="https://SITE_URL_TODO/">
-    <meta property="og:url" content="https://SITE_URL_TODO/">
-    <meta property="og:image" content="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Tiny Tails Pet Services">
-    <meta name="twitter:description" content="Family-run pet care services with eco-friendly values.">
-    <meta name="twitter:image" content="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80">
-    <!-- Note: configure full CSP headers at the hosting layer for production deployments. -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://SITE_URL_TODO https://images.unsplash.com https://plus.unsplash.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' https://cdn.tailwindcss.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com; connect-src 'self';">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <title>Tiny Tails Pet Services | Home</title>
-    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
-    <link rel="manifest" href="/manifest.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&family=Nunito:wght@200;300;400;500&display=swap" as="style" onload="this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600&family=Nunito:wght@200;300;400;500&display=swap">
-    </noscript>
-    <link rel="stylesheet" href="/assets/css/styles.css">
-    <script>
-        tailwind = window.tailwind || {};
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#FFB6C1',
-                        secondary: '#333333',
-                    }
-                }
-            }
-        };
-    </script>
-    <script src="https://cdn.tailwindcss.com" defer></script>
+    <title>Tiny Tails | Premium Pet Supplies & Home-From-Home Care</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Import Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+        
+        /* Variables */
         :root {
-            --tt-primary: #FFB6C1;
-            --tt-secondary: #333333;
+            --pink: #ffdfea;
+            --dark-pink: #ffb6d1;
+            --black: #1a1a1a;
+            --gray: #333;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
         }
+        
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
-            font-family: 'Nunito', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            color: var(--tt-secondary);
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            background-color: var(--white);
+            color: var(--black);
+            line-height: 1.6;
         }
-        .logo {
-            font-family: 'Comfortaa', cursive;
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
         }
-        .hero {
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--black);
+            color: var(--white);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: var(--gray);
+            transform: translateY(-2px);
+        }
+        
+        .btn-pink {
+            background-color: var(--dark-pink);
+        }
+        
+        .btn-pink:hover {
+            background-color: #ff8cb9;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--dark-pink);
+            color: var(--dark-pink);
+        }
+        
+        .btn-outline:hover {
+            background-color: var(--dark-pink);
+            color: var(--white);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--black);
+            margin-bottom: 15px;
             position: relative;
-            overflow: hidden;
-            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+            display: inline-block;
         }
-        .hero::before {
+        
+        .section-title h2::after {
             content: '';
             position: absolute;
-            inset: 0;
-            background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
-            z-index: 1;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--dark-pink);
         }
-        .hero__media {
+        
+        .section-title p {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--gray);
+        }
+        
+        /* Page Styles */
+        .page {
+            display: none;
+            min-height: 80vh;
+            padding: 40px 0;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .top-bar {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 8px 0;
+            font-size: 0.9rem;
+        }
+        
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .main-header {
+            padding: 15px 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo h1 {
+            font-size: 1.8rem;
+            color: var(--black);
+        }
+        
+        .logo span {
+            color: var(--dark-pink);
+        }
+        
+        .search-bar {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 20px;
+            position: relative;
+        }
+        
+        .search-bar input {
+            width: 100%;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .search-bar input:focus {
+            border-color: var(--dark-pink);
+            box-shadow: 0 0 0 2px rgba(255, 182, 209, 0.2);
+            outline: none;
+        }
+        
+        .search-bar button {
             position: absolute;
-            inset: 0;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--dark-pink);
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+        
+        .header-actions {
+            display: flex;
+            align-items: center;
+        }
+        
+        .header-actions a {
+            margin-left: 20px;
+            font-size: 1.2rem;
+            color: var(--black);
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .header-actions a:hover {
+            color: var(--dark-pink);
+        }
+        
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: var(--dark-pink);
+            color: var(--white);
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: var(--black);
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .nav-links li {
+            position: relative;
+        }
+        
+        .nav-links a {
+            display: block;
+            color: var(--white);
+            padding: 15px 20px;
+            font-weight: 500;
+            transition: var(--transition);
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-links a.active {
+            background-color: var(--dark-pink);
+        }
+        
+        .dropdown {
+            position: absolute;
+            background-color: var(--white);
+            box-shadow: var(--shadow);
+            width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            z-index: 10;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .nav-links li:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown a {
+            color: var(--black);
+            padding: 12px 15px;
+            border-bottom: 1px solid #eee;
+            text-transform: none;
+            font-size: 0.9rem;
+        }
+        
+        .dropdown a:hover {
+            background-color: var(--pink);
+            color: var(--black);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1450778869180-41d0601e046e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1150&q=80');
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            text-align: center;
+            padding: 100px 0;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        /* Categories Section */
+        .categories {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .category-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .category-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .category-card:hover .category-img img {
+            transform: scale(1.1);
+        }
+        
+        .category-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .category-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--black);
+        }
+        
+        /* Products Section */
+        .products {
+            padding: 80px 0;
+            background-color: var(--pink);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-img {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .product-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
         }
-        .hero__content {
-            position: relative;
-            z-index: 2;
+        
+        .product-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: var(--dark-pink);
+            color: var(--white);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
         }
-        @media (prefers-reduced-motion: reduce) {
-            *, *::before, *::after {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
+        
+        .product-info {
+            padding: 20px;
+        }
+        
+        .product-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            color: var(--black);
+        }
+        
+        .product-price {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .current-price {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--black);
+            margin-right: 10px;
+        }
+        
+        .original-price {
+            font-size: 1rem;
+            color: #999;
+            text-decoration: line-through;
+        }
+        
+        .rating {
+            color: #ffc107;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            background-color: var(--dark-pink);
+            color: var(--white);
+            font-size: 2.5rem;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .service-content {
+            padding: 30px;
+        }
+        
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--black);
+        }
+        
+        .service-content p {
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+        
+        .service-price {
+            background-color: var(--light-gray);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .service-price .price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--black);
+        }
+        
+        .service-price .note {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .service-features {
+            margin-bottom: 20px;
+        }
+        
+        .service-features li {
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .service-features i {
+            color: var(--dark-pink);
+            margin-right: 10px;
+            margin-top: 3px;
+            font-size: 0.9rem;
+        }
+        
+        /* About Section */
+        .about {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 40px;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .about-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--black);
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            color: var(--gray);
+        }
+        
+        .features {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            margin-top: 20px;
+        }
+        
+        .features h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--black);
+        }
+        
+        .features ul {
+            list-style: none;
+        }
+        
+        .features li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .features i {
+            color: var(--dark-pink);
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--pink);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .testimonial-card:hover {
+            transform: scale(1.02);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-icon {
+            color: var(--dark-pink);
+            font-size: 1.5rem;
+            margin-right: 15px;
+        }
+        
+        .testimonial-author h4 {
+            font-size: 1.2rem;
+            color: var(--black);
+        }
+        
+        .testimonial-stars {
+            color: var(--dark-pink);
+            margin-top: 5px;
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            color: var(--gray);
+            line-height: 1.6;
+        }
+        
+        /* Brands Section */
+        .brands {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .brand-logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 20px;
+            transition: var(--transition);
+        }
+        
+        .brand-logo:hover {
+            transform: translateY(-5px);
+        }
+        
+        .brand-logo img {
+            max-width: 100%;
+            max-height: 60px;
+            filter: grayscale(100%);
+            transition: var(--transition);
+        }
+        
+        .brand-logo:hover img {
+            filter: grayscale(0%);
+        }
+        
+        /* Blog Section */
+        .blog {
+            padding: 80px 0;
+            background-color: var(--pink);
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .blog-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .blog-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .blog-card:hover .blog-img img {
+            transform: scale(1.1);
+        }
+        
+        .blog-content {
+            padding: 20px;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .blog-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--black);
+        }
+        
+        .blog-content p {
+            margin-bottom: 15px;
+            color: var(--gray);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            margin-right: 40px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--black);
+        }
+        
+        .contact-info p {
+            margin-bottom: 30px;
+            color: var(--gray);
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-detail i {
+            color: var(--dark-pink);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .contact-detail h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            color: var(--black);
+        }
+        
+        .contact-detail p {
+            margin-bottom: 0;
+            color: var(--gray);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            color: var(--black);
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--dark-pink);
+            color: white;
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--black);
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--dark-pink);
+            box-shadow: 0 0 0 2px rgba(255, 182, 209, 0.2);
+        }
+        
+        /* Sale Section */
+        .sale {
+            padding: 80px 0;
+            background-color: var(--pink);
+        }
+        
+        .sale-banner {
+            background-color: var(--dark-pink);
+            color: var(--white);
+            text-align: center;
+            padding: 40px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+        }
+        
+        .sale-banner h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .sale-banner p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        /* Newsletter */
+        .newsletter {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .newsletter-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .newsletter h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .newsletter p {
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-size: 1rem;
+        }
+        
+        .newsletter-form input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px var(--dark-pink);
+        }
+        
+        .newsletter-form button {
+            background-color: var(--dark-pink);
+            color: var(--white);
+            border: none;
+            padding: 0 25px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .newsletter-form button:hover {
+            background-color: #ff8cb9;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--black);
+            color: var(--white);
+            padding: 60px 0 0;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 2px;
+            background-color: var(--dark-pink);
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #bbb;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--white);
+        }
+        
+        .social-links-footer {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links-footer a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links-footer a:hover {
+            background-color: var(--dark-pink);
+        }
+        
+        .contact-info-footer li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info-footer i {
+            margin-right: 10px;
+            color: var(--dark-pink);
+        }
+        
+        .footer-bottom {
+            background-color: rgba(0, 0, 0, 0.2);
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .header-content {
+                flex-wrap: wrap;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            .search-bar {
+                order: 3;
+                max-width: 100%;
+                margin: 15px 0 0;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                margin-right: 0;
+                margin-bottom: 30px;
+            }
+            
+            .contact-content {
+                flex-direction: column;
+            }
+            
+            .contact-info {
+                margin-right: 0;
+                margin-bottom: 40px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .newsletter-form input {
+                border-radius: 4px;
+                margin-bottom: 10px;
+            }
+            
+            .newsletter-form button {
+                border-radius: 4px;
+                padding: 12px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .top-bar-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .top-bar-content > div {
+                margin-bottom: 5px;
+            }
+            
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .hero h2 {
+                font-size: 1.8rem;
             }
         }
     </style>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "additionalType": "https://schema.org/PetService",
-      "name": "Tiny Tails Pet Services",
-      "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=1200&q=80",
-      "@id": "https://SITE_URL_TODO/",
-      "url": "https://SITE_URL_TODO/",
-      "telephone": "+44 TODO-UPDATE-NUMBER",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "TODO: Update street address",
-        "addressLocality": "Cheshire",
-        "addressRegion": "Cheshire",
-        "postalCode": "TODO: Update postcode",
-        "addressCountry": "GB"
-      },
-      "geo": { "@type": "GeoCoordinates", "latitude": 53.1934, "longitude": -2.8931 },
-      "openingHoursSpecification": [{
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
-          "opens": "08:00","closes": "20:00"
-      }],
-      "priceRange": "££",
-      "description": "Family-run pet boarding, dog day care, and walking services in Cheshire, UK.",
-      "sameAs": [
-        "https://www.facebook.com/TODO",
-        "https://www.instagram.com/TODO",
-        "https://www.twitter.com/TODO"
-      ]
-    }
-    </script>
-    <script defer src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script defer src="/assets/js/main.js"></script>
 </head>
-<body class="bg-white">
-    <a href="#main-content" class="skip-link">Skip to content</a>
-    <header class="bg-white shadow-md sticky top-0 z-50" role="banner">
-        <div class="container mx-auto px-6 py-3 flex items-center justify-between" aria-label="Site header">
-            <div class="logo flex items-center text-secondary" aria-label="Tiny Tails logo">
-                <span class="text-2xl font-bold text-primary">Tiny</span>
-                <span class="text-2xl font-bold text-secondary">Tails</span>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div>Free shipping on orders over £50</div>
+            <div>Call us: 0800 123 4567</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container main-header">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBmaWxsPSIjMWExYTFhIiBkPSJNMjU2IDhDMTE5IDggOCAxMTkgOCAyNTZzMTExIDI0OCAyNDggMjQ4IDI0OC0xMTEgMjQ4LTI0OFMzOTMgOCAyNTYgOHptMTI4IDM1MmMwIDguOC03LjIgMTYtMTYgMTZIMTQ0Yy04LjggMC0xNi03LjItMTYtMTZWMTUyYzAtOC44IDcuMi0xNiAxNi0xNmgyMjRjOC44IDAgMTYgNy4yIDE2IDE2djIwOHoiLz48cGF0aCBmaWxsPSIjZmZiNmQxIiBkPSJNMzIwIDM2MEgxOTJjLTE3LjcgMC0zMi0xNC4zLTMyLTMyVjE4NGMwLTE3LjcgMTQuMy0zMiAzMi0zMmgxMjhjMTcuNyAwIDMyIDE0LjMgMzIgMzJ2MTQ0YzAgMTcuNy0xNC4zIDMyLTMyIDMyeiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0yMjQgMjI0aDY0djY0aC02NHYtNjR6bTAtOTZoNjR2NjRoLTY0di02NHptOTYgOTZoNjR2NjRoLTY0di02NHomLTk2IDk2aDY0djY0aC02NHYtNjR6bTk2IDBoNjR2NjRoLTY0di02NHoiLz48L3N2Zz4=" alt="Tiny Tails Logo">
+                    <h1>Tiny <span>Tails</span></h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-actions">
+                    <a href="#"><i class="fas fa-user"></i></a>
+                    <a href="#"><i class="fas fa-heart"></i></a>
+                    <a href="#">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">3</span>
+                    </a>
+                </div>
             </div>
-            <nav class="hidden md:flex space-x-8" aria-label="Primary">
-                <a href="/" class="nav-link" data-nav-active="true">Home</a>
-                <a href="/pages/about.html" class="nav-link">About Us</a>
-                <a href="/pages/services.html" class="nav-link">Services</a>
-                <a href="/pages/shop.html" class="nav-link">Pet Shop</a>
-                <a href="/pages/gallery.html" class="nav-link">Gallery</a>
-                <a href="/pages/blog.html" class="nav-link">Blog</a>
-                <a href="/pages/contact.html" class="nav-link">Contact</a>
-            </nav>
-            <button class="md:hidden nav-toggle" aria-label="Toggle navigation" aria-expanded="false" data-menu-toggle>
-                <i data-feather="menu" aria-hidden="true"></i>
-            </button>
         </div>
-        <div class="md:hidden border-t border-gray-100" data-mobile-menu-container>
-            <nav class="hidden flex-col space-y-2 px-6 py-3" id="mobile-menu" aria-label="Mobile primary">
-                <a href="/" class="mobile-nav-link" data-nav-active="true">Home</a>
-                <a href="/pages/about.html" class="mobile-nav-link">About Us</a>
-                <a href="/pages/services.html" class="mobile-nav-link">Services</a>
-                <a href="/pages/shop.html" class="mobile-nav-link">Pet Shop</a>
-                <a href="/pages/gallery.html" class="mobile-nav-link">Gallery</a>
-                <a href="/pages/blog.html" class="mobile-nav-link">Blog</a>
-                <a href="/pages/contact.html" class="mobile-nav-link">Contact</a>
-            </nav>
-        </div>
+
+        <!-- Navigation -->
+        <nav>
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                    <li>
+                        <a href="#" class="nav-link" data-page="shop">Shop <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown">
+                            <a href="#" class="nav-link" data-page="dog-supplies">Dog Supplies</a>
+                            <a href="#" class="nav-link" data-page="cat-supplies">Cat Supplies</a>
+                            <a href="#" class="nav-link" data-page="small-pets">Small Pets</a>
+                            <a href="#" class="nav-link" data-page="birds-reptiles">Birds &amp; Reptiles</a>
+                        </div>
+                    </li>
+                    <li><a href="#" class="nav-link" data-page="services">Services</a></li>
+                    <li><a href="#" class="nav-link" data-page="new-arrivals">New Arrivals</a></li>
+                    <li><a href="#" class="nav-link" data-page="sale">Sale</a></li>
+                    <li><a href="#" class="nav-link" data-page="brands">Brands</a></li>
+                    <li><a href="#" class="nav-link" data-page="blog">Blog</a></li>
+                    <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
-    <main id="main-content" tabindex="-1">
-        <section class="hero py-24 md:py-32">
-            <picture>
-                <source srcset="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&amp;fit=crop&amp;w=1600&amp;q=80 1600w, https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80 1200w" sizes="100vw" media="(min-width: 768px)">
-                <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&amp;fit=crop&amp;w=800&amp;q=80" srcset="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&amp;fit=crop&amp;w=1200&amp;q=80 1200w, https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&amp;fit=crop&amp;w=800&amp;q=80 800w" sizes="100vw" alt="Happy dachshund relaxing on a cosy blanket" class="hero__media" loading="eager" decoding="async">
-            </picture>
-            <div class="container mx-auto px-6 text-center hero__content">
-                <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-4">Safe, Loving Care for Your Pets</h1>
-                <p class="text-xl text-secondary mb-8">Family-run, licensed UK pet boarding with eco-friendly values</p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="/pages/contact.html" class="btn btn-primary">Book With Us</a>
-                    <a href="#services" class="btn btn-secondary">Explore Services</a>
-                </div>
+    <!-- Home Page -->
+    <section id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h2>Premium Products &amp; Loving Care for Your Furry Friends</h2>
+                <p>Discover our wide range of high-quality pet supplies and home-from-home care services for all your pet's needs.</p>
+                <a href="#services" class="btn btn-pink" data-page="services">Our Services</a>
+                <a href="#shop" class="btn" data-page="shop" style="margin-left: 15px;">Shop Now</a>
             </div>
         </section>
 
-        <section class="py-16 bg-white" aria-labelledby="about-heading">
-            <div class="container mx-auto px-6">
-                <div class="flex flex-col md:flex-row items-center gap-10">
-                    <div class="md:w-1/2" data-animate="fade-in">
-                        <h2 id="about-heading" class="text-3xl font-bold text-secondary mb-4">About Tiny Tails</h2>
-                        <p class="text-secondary mb-4">We're a family-run pet care service dedicated to providing your furry friends with the love and attention they deserve while you're away.</p>
-                        <p class="text-secondary mb-4">Our eco-friendly approach means we reuse packaging, choose sustainable products, and minimise our environmental pawprint.</p>
-                        <p class="text-secondary">Fully licensed and insured, with a safe, cosy environment where your pets will feel comfortable, safe, and happy.</p>
+        <!-- Categories Section -->
+        <section class="categories">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Shop by Category</h2>
+                    <p>Find everything your pet needs in one place</p>
+                </div>
+                <div class="category-grid">
+                    <div class="category-card">
+                        <div class="category-img">
+                            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Dog Supplies">
+                        </div>
+                        <div class="category-info">
+                            <h3>Dog Supplies</h3>
+                            <a href="#" class="btn btn-outline" data-page="dog-supplies">Shop Now</a>
+                        </div>
                     </div>
-                    <div class="md:w-1/2">
-                        <picture>
-                            <source srcset="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&amp;fit=crop&amp;w=1200&amp;q=80 1200w, https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&amp;fit=crop&amp;w=960&amp;q=80 960w" sizes="(min-width: 768px) 50vw, 100vw" media="(min-width: 768px)">
-                            <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&amp;fit=crop&amp;w=640&amp;q=80" srcset="https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&amp;fit=crop&amp;w=960&amp;q=80 960w, https://images.unsplash.com/photo-1516979187457-637abb4f9353?auto=format&amp;fit=crop&amp;w=640&amp;q=80 640w" sizes="(min-width: 768px) 50vw, 100vw" alt="Two tabby kittens napping together on a blanket" class="rounded-lg shadow-lg w-full h-full object-cover" loading="lazy" decoding="async">
-                        </picture>
+                    <div class="category-card">
+                        <div class="category-img">
+                            <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Cat Supplies">
+                        </div>
+                        <div class="category-info">
+                            <h3>Cat Supplies</h3>
+                            <a href="#" class="btn btn-outline" data-page="cat-supplies">Shop Now</a>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 bg-gray-50" id="services" aria-labelledby="services-heading">
-            <div class="container mx-auto px-6">
-                <h2 id="services-heading" class="text-3xl font-bold text-center text-secondary mb-12">Our Services</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <article class="service-card">
-                        <div class="text-primary mb-4" aria-hidden="true"><i data-feather="home" class="w-10 h-10"></i></div>
-                        <h3 class="text-xl font-bold text-secondary mb-2">Home Boarding</h3>
-                        <p class="text-secondary">Cosy overnight stays with a calm, supervised environment and regular updates.</p>
-                    </article>
-                    <article class="service-card">
-                        <div class="text-primary mb-4" aria-hidden="true"><i data-feather="sun" class="w-10 h-10"></i></div>
-                        <h3 class="text-xl font-bold text-secondary mb-2">Dog Day Care</h3>
-                        <p class="text-secondary">Daily activities and socialisation for your pup while you're at work or away for the day.</p>
-                    </article>
-                    <article class="service-card">
-                        <div class="text-primary mb-4" aria-hidden="true"><i data-feather="activity" class="w-10 h-10"></i></div>
-                        <h3 class="text-xl font-bold text-secondary mb-2">Dog Walking</h3>
-                        <p class="text-secondary">Local countryside walks with safe handling to keep your dog exercised and happy.</p>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 bg-white" aria-labelledby="licensing-heading">
-            <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h2 id="licensing-heading" class="text-3xl font-bold text-secondary mb-4">Licensing &amp; Insurance</h2>
-                    <p class="text-secondary mb-4">TODO: Add licensing authority details, certificate numbers, and insurance provider summary.</p>
-                    <p class="text-secondary">Use this space to reassure pet parents about compliance and safeguarding processes.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 bg-primary text-secondary" aria-labelledby="testimonials-heading">
-            <div class="container mx-auto px-6">
-                <h2 id="testimonials-heading" class="text-3xl font-bold text-center mb-12 text-secondary">Happy Tails</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <figure class="testimonial-card">
-                        <blockquote class="italic mb-4">"Our Labrador absolutely loves staying at Tiny Tails. We get daily updates and he comes home happy and tired!"</blockquote>
-                        <figcaption class="font-bold">- Sarah K.</figcaption>
-                    </figure>
-                    <figure class="testimonial-card">
-                        <blockquote class="italic mb-4">"Reliable, friendly, and genuinely caring. Highly recommend for boarding and day care."</blockquote>
-                        <figcaption class="font-bold">- Daniel R.</figcaption>
-                    </figure>
-                    <figure class="testimonial-card">
-                        <blockquote class="italic mb-4">"Great communication and a lovely home environment. Our spaniel settled straight away."</blockquote>
-                        <figcaption class="font-bold">- Priya M.</figcaption>
-                    </figure>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-16 bg-white text-center" aria-labelledby="cta-heading">
-            <div class="container mx-auto px-6">
-                <h2 id="cta-heading" class="text-3xl font-bold text-secondary mb-4">Ready to Book?</h2>
-                <p class="text-xl text-secondary mb-8">Contact us today to arrange a meet-and-greet</p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="tel:+44TODO-PHONE" class="btn btn-primary">Call Us <!-- TODO: Update phone number --></a>
-                    <a href="/pages/contact.html" class="btn btn-secondary">Send Message</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-secondary text-white py-12" role="contentinfo">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Tiny Tails</h3>
-                    <p class="mb-4">Family-run pet care services with love and sustainability at our heart.</p>
-                    <div class="flex space-x-4" aria-label="Social media">
-                        <a href="https://www.facebook.com/TODO" aria-label="Facebook" class="link-inline"><i data-feather="facebook" class="w-5 h-5" aria-hidden="true"></i></a>
-                        <a href="https://www.instagram.com/TODO" aria-label="Instagram" class="link-inline"><i data-feather="instagram" class="w-5 h-5" aria-hidden="true"></i></a>
-                        <a href="https://www.twitter.com/TODO" aria-label="Twitter" class="link-inline"><i data-feather="twitter" class="w-5 h-5" aria-hidden="true"></i></a>
+                    <div class="category-card">
+                        <div class="category-img">
+                            <img src="https://images.unsplash.com/photo-1452857297128-d9c29adba80b?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Small Pets">
+                        </div>
+                        <div class="category-info">
+                            <h3>Small Pets</h3>
+                            <a href="#" class="btn btn-outline" data-page="small-pets">Shop Now</a>
+                        </div>
+                    </div>
+                    <div class="category-card">
+                        <div class="category-img">
+                            <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Birds &amp; Reptiles">
+                        </div>
+                        <div class="category-info">
+                            <h3>Birds &amp; Reptiles</h3>
+                            <a href="#" class="btn btn-outline" data-page="birds-reptiles">Shop Now</a>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="/" class="footer-link">Home</a></li>
-                        <li><a href="/pages/about.html" class="footer-link">About Us</a></li>
-                        <li><a href="/pages/services.html" class="footer-link">Services</a></li>
-                        <li><a href="/pages/shop.html" class="footer-link">Pet Shop</a></li>
+            </div>
+        </section>
+
+        <!-- Featured Products -->
+        <section class="products">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Featured Products</h2>
+                    <p>Check out our most popular items</p>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Premium Dog Food">
+                            <span class="product-badge">Bestseller</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Premium Dog Food - Chicken &amp; Rice</h3>
+                            <div class="product-price">
+                                <span class="current-price">£24.99</span>
+                                <span class="original-price">£29.99</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <a href="#" class="btn btn-pink">Add to Cart</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1591946614720-90a587da4a36?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Cat Scratching Post">
+                        </div>
+                        <div class="product-info">
+                            <h3>Deluxe Cat Scratching Post</h3>
+                            <div class="product-price">
+                                <span class="current-price">£39.99</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <a href="#" class="btn btn-pink">Add to Cart</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1576669801945-bf4c1a96f6e3?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Small Pet Cage">
+                            <span class="product-badge">New</span>
+                        </div>
+                        <div class="product-info">
+                            <h3>Small Pet Habitat with Accessories</h3>
+                            <div class="product-price">
+                                <span class="current-price">£59.99</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <a href="#" class="btn btn-pink">Add to Cart</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-img">
+                            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Interactive Dog Toy">
+                        </div>
+                        <div class="product-info">
+                            <h3>Interactive Puzzle Dog Toy</h3>
+                            <div class="product-price">
+                                <span class="current-price">£14.99</span>
+                                <span class="original-price">£19.99</span>
+                            </div>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <a href="#" class="btn btn-pink">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Preview -->
+        <section class="services">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Our Services</h2>
+                    <p>Home-from-home pet care in Cheshire where your pet becomes part of our family</p>
+                </div>
+                
+                <div class="services-grid">
+                    <!-- Dog Boarding -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Dog Boarding</h3>
+                            <p>Your dog stays in my home as part of the family while you're away. Perfect for when you need to travel without worrying about your furry friend.</p>
+                            
+                            <div class="service-price">
+                                <div class="price">£35 per night</div>
+                                <div class="note">Additional dog from same family: £25/night</div>
+                            </div>
+                            
+                            <a href="#" class="btn" data-page="services">Learn More</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Dog Walking -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-dog"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Dog Walking</h3>
+                            <p>Tailored walks to suit your dog's energy level and needs. From gentle strolls to energetic adventures in the Cheshire countryside.</p>
+                            
+                            <div class="service-price">
+                                <div class="price">£12 per walk</div>
+                                <div class="note">Additional dog from same family: £8/walk</div>
+                            </div>
+                            
+                            <a href="#" class="btn btn-pink" data-page="services">Learn More</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Drop-in Visits -->
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>Drop-in Visits</h3>
+                            <p>Perfect for when you're working late or need someone to check in on your pet. Includes feeding, playtime, and lots of attention.</p>
+                            
+                            <div class="service-price">
+                                <div class="price">£10 per visit</div>
+                                <div class="note">Additional pets: £5/visit</div>
+                            </div>
+                            
+                            <a href="#" class="btn btn-pink" data-page="services">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- Shop Page -->
+    <section id="shop" class="page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Shop All Products</h2>
+                <p>Browse our complete range of pet supplies</p>
+            </div>
+            
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Dog Supplies">
+                    </div>
+                    <div class="category-info">
+                        <h3>Dog Supplies</h3>
+                        <a href="#" class="btn btn-outline" data-page="dog-supplies">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Cat Supplies">
+                    </div>
+                    <div class="category-info">
+                        <h3>Cat Supplies</h3>
+                        <a href="#" class="btn btn-outline" data-page="cat-supplies">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1452857297128-d9c29adba80b?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Small Pets">
+                    </div>
+                    <div class="category-info">
+                        <h3>Small Pets</h3>
+                        <a href="#" class="btn btn-outline" data-page="small-pets">Shop Now</a>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <div class="category-img">
+                        <img src="https://images.unsplash.com/photo-1552728089-57bdde30beb3?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Birds &amp; Reptiles">
+                    </div>
+                    <div class="category-info">
+                        <h3>Birds &amp; Reptiles</h3>
+                        <a href="#" class="btn btn-outline" data-page="birds-reptiles">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-grid" style="margin-top: 50px;">
+                <!-- Repeat product cards from home page -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Premium Dog Food">
+                        <span class="product-badge">Bestseller</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Dog Food - Chicken &amp; Rice</h3>
+                        <div class="product-price">
+                            <span class="current-price">£24.99</span>
+                            <span class="original-price">£29.99</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <a href="#" class="btn btn-pink">Add to Cart</a>
+                    </div>
+                </div>
+                
+                <!-- Additional products can be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Page -->
+    <section id="services" class="page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Home-from-home pet care in Cheshire where your pet becomes part of our family</p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Dog Boarding -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Dog Boarding</h3>
+                        <p>Your dog stays in my home as part of the family while you're away. Perfect for when you need to travel without worrying about your furry friend.</p>
+                        
+                        <div class="service-price">
+                            <div class="price">£35 per night</div>
+                            <div class="note">Additional dog from same family: £25/night</div>
+                        </div>
+                        
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> 24/7 care in a home environment</li>
+                            <li><i class="fas fa-check"></i> Daily walks included</li>
+                            <li><i class="fas fa-check"></i> Regular photo updates</li>
+                            <li><i class="fas fa-check"></i> No kennels or cages</li>
+                            <li><i class="fas fa-check"></i> Follow your pet's normal routine</li>
+                        </ul>
+                        
+                        <a href="#" class="btn" data-page="contact">Book Now</a>
+                    </div>
+                </div>
+                
+                <!-- Dog Walking -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-dog"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Dog Walking</h3>
+                        <p>Tailored walks to suit your dog's energy level and needs. From gentle strolls to energetic adventures in the Cheshire countryside.</p>
+                        
+                        <div class="service-price">
+                            <div class="price">£12 per walk</div>
+                            <div class="note">Additional dog from same family: £8/walk</div>
+                        </div>
+                        
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> 30-60 minute walks</li>
+                            <li><i class="fas fa-check"></i> Flexible scheduling</li>
+                            <li><i class="fas fa-check"></i> Water and post-walk cuddles included</li>
+                            <li><i class="fas fa-check"></i> Local countryside routes</li>
+                            <li><i class="fas fa-check"></i> Small group or solo walks available</li>
+                        </ul>
+                        
+                        <a href="#" class="btn btn-pink" data-page="contact">Book Now</a>
+                    </div>
+                </div>
+                
+                <!-- Drop-in Visits -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="service-content">
+                        <h3>Drop-in Visits</h3>
+                        <p>Perfect for when you're working late or need someone to check in on your pet. Includes feeding, playtime, and lots of attention.</p>
+                        
+                        <div class="service-price">
+                            <div class="price">£10 per visit</div>
+                            <div class="note">Additional pets: £5/visit</div>
+                        </div>
+                        
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> 30 minute visits</li>
+                            <li><i class="fas fa-check"></i> Feeding, fresh water, and toilet breaks</li>
+                            <li><i class="fas fa-check"></i> Medication administration if needed</li>
+                            <li><i class="fas fa-check"></i> Playtime and cuddles</li>
+                            <li><i class="fas fa-check"></i> Text updates after each visit</li>
+                        </ul>
+                        
+                        <a href="#" class="btn btn-pink" data-page="contact">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- About Section -->
+            <section class="about" style="padding: 80px 0 0;">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1583511655826-05700d52f4d9?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=988&amp;q=80" alt="Aleshia with a dog">
+                    </div>
+                    <div class="about-text">
+                        <h2>Hi, I'm Aleshia</h2>
+                        <p>I started Tiny Tails because I believe pets deserve more than cold kennels when their owners are away. Having grown up with dogs all my life, I understand how important it is to maintain their routine and provide genuine care.</p>
+                        <p>When your pet stays with me, they become part of my family. We'll go for walks in the local countryside, snuggle on the sofa, and follow their normal routine as much as possible. I only take a small number of pets at a time to ensure everyone gets the attention they deserve.</p>
+                        
+                        <div class="features">
+                            <h3>Why choose Tiny Tails?</h3>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Fully insured and DBS-checked for your peace of mind</li>
+                                <li><i class="fas fa-check"></i> No kennels - your pet stays in my home as part of the family</li>
+                                <li><i class="fas fa-check"></i> Never left alone for long periods</li>
+                                <li><i class="fas fa-check"></i> Daily updates with photos so you know they're happy</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Testimonials Section -->
+            <section class="testimonials">
+                <div class="container">
+                    <div class="section-title">
+                        <h2>What Pet Parents Say</h2>
+                        <p>Don't just take our word for it - hear from our happy customers</p>
+                    </div>
+                    
+                    <div class="testimonials-grid">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="testimonial-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <div class="testimonial-author">
+                                    <h4>Sarah &amp; Max</h4>
+                                    <div class="testimonial-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">"Leaving Max with Aleshia was like leaving him with family. He was so relaxed when we picked him up, and the daily photos showed us how much fun he was having. We'll never use kennels again!"</p>
+                        </div>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="testimonial-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <div class="testimonial-author">
+                                    <h4>James &amp; Bella</h4>
+                                    <div class="testimonial-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">"Bella can be anxious with new people, but she took to Aleshia immediately during their meet-and-greet. The regular updates while we were on holiday put our minds at ease completely."</p>
+                        </div>
+                        
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-header">
+                                <div class="testimonial-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <div class="testimonial-author">
+                                    <h4>Emma &amp; Charlie</h4>
+                                    <div class="testimonial-stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <p class="testimonial-text">"Charlie has stayed with Aleshia multiple times now and always comes home happy and tired from all the walks and playtime. It's such a relief knowing he's in such good hands when we're away."</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <!-- New Arrivals Page -->
+    <section id="new-arrivals" class="page">
+        <div class="container">
+            <div class="section-title">
+                <h2>New Arrivals</h2>
+                <p>Check out our latest products</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- New arrival products would go here -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1576669801945-bf4c1a96f6e3?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Small Pet Cage">
+                        <span class="product-badge">New</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Small Pet Habitat with Accessories</h3>
+                        <div class="product-price">
+                            <span class="current-price">£59.99</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <a href="#" class="btn btn-pink">Add to Cart</a>
+                    </div>
+                </div>
+                
+                <!-- Additional new arrival products -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Sale Page -->
+    <section id="sale" class="page">
+        <div class="container">
+            <div class="sale-banner">
+                <h2>Summer Sale</h2>
+                <p>Up to 50% off selected items</p>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+            
+            <div class="section-title">
+                <h2>On Sale</h2>
+                <p>Great deals on quality pet products</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Sale products would go here -->
+                <div class="product-card">
+                    <div class="product-img">
+                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Premium Dog Food">
+                        <span class="product-badge">Sale</span>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Dog Food - Chicken &amp; Rice</h3>
+                        <div class="product-price">
+                            <span class="current-price">£24.99</span>
+                            <span class="original-price">£29.99</span>
+                        </div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <a href="#" class="btn btn-pink">Add to Cart</a>
+                    </div>
+                </div>
+                
+                <!-- Additional sale products -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Page -->
+    <section id="brands" class="page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Brands</h2>
+                <p>We stock only the highest quality brands for your pets</p>
+            </div>
+            
+            <div class="brands-grid">
+                <div class="brand-logo">
+                    <img src="https://via.placeholder.com/150x80/ffb6d1/ffffff?text=Brand+1" alt="Brand 1">
+                </div>
+                <div class="brand-logo">
+                    <img src="https://via.placeholder.com/150x80/ffb6d1/ffffff?text=Brand+2" alt="Brand 2">
+                </div>
+                <div class="brand-logo">
+                    <img src="https://via.placeholder.com/150x80/ffb6d1/ffffff?text=Brand+3" alt="Brand 3">
+                </div>
+                <div class="brand-logo">
+                    <img src="https://via.placeholder.com/150x80/ffb6d1/ffffff?text=Brand+4" alt="Brand 4">
+                </div>
+                <div class="brand-logo">
+                    <img src="https://via.placeholder.com/150x80/ffb6d1/ffffff?text=Brand+5" alt="Brand 5">
+                </div>
+                <div class="brand-logo">
+                    <img src="https://via.placeholder.com/150x80/ffb6d1/ffffff?text=Brand+6" alt="Brand 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Page -->
+    <section id="blog" class="page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Pet Care Blog</h2>
+                <p>Tips, advice, and stories for pet lovers</p>
+            </div>
+            
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Blog Post 1">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>June 15, 2023</span>
+                            <span>5 min read</span>
+                        </div>
+                        <h3>How to Keep Your Dog Entertained While You're Away</h3>
+                        <p>Discover fun and engaging activities to keep your furry friend happy and stimulated when you're not at home.</p>
+                        <a href="#" class="btn btn-outline">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Blog Post 2">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>June 8, 2023</span>
+                            <span>7 min read</span>
+                        </div>
+                        <h3>The Ultimate Guide to Cat Nutrition</h3>
+                        <p>Learn what to feed your feline friend for optimal health and longevity with our comprehensive guide.</p>
+                        <a href="#" class="btn btn-outline">Read More</a>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-img">
+                        <img src="https://images.unsplash.com/photo-1452857297128-d9c29adba80b?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Blog Post 3">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span>May 28, 2023</span>
+                            <span>4 min read</span>
+                        </div>
+                        <h3>Small Pet Care: Creating the Perfect Habitat</h3>
+                        <p>Everything you need to know about setting up the ideal living environment for your small pets.</p>
+                        <a href="#" class="btn btn-outline">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Page -->
+    <section id="contact" class="page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with any questions or to book our services</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Ready to book or have questions? Reach out – we'd love to chat about how we can help care for your furry family member.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Cheshire, UK</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>01234 567890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>hello@tinytailspets.co.uk</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Availability</h4>
+                                <p>Monday - Sunday: 8am - 8pm</p>
+                                <p>Emergency care available outside these hours by arrangement</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service">
+                                <option value="">Select a service</option>
+                                <option value="boarding">Dog Boarding</option>
+                                <option value="walking">Dog Walking</option>
+                                <option value="drop-in">Drop-in Visits</option>
+                                <option value="products">Product Inquiry</option>
+                                <option value="other">Other Enquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" rows="4"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Pages (Dog Supplies, Cat Supplies, etc.) -->
+    <section id="dog-supplies" class="page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Dog Supplies</h2>
+                <p>Everything your canine companion needs</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Dog-specific products would go here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="cat-supplies" class="page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Cat Supplies</h2>
+                <p>Purr-fect products for your feline friends</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Cat-specific products would go here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="small-pets" class="page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Small Pet Supplies</h2>
+                <p>Everything for rabbits, guinea pigs, hamsters and more</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Small pet-specific products would go here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="birds-reptiles" class="page">
+        <div class="container">
+            <div class="section-title">
+                <h2>Birds &amp; Reptiles</h2>
+                <p>Supplies for your feathered and scaled friends</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Bird and reptile-specific products would go here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container newsletter-content">
+            <h2>Join Our Newsletter</h2>
+            <p>Subscribe to get special offers, free giveaways, and pet care tips</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Your email address">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>Tiny Tails is your one-stop shop for all pet supplies and home-from-home care. We offer high-quality products and services for dogs, cats, and small pets.</p>
+                    <div class="social-links-footer">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-page="home">Home</a></li>
+                        <li><a href="#" data-page="shop">Shop</a></li>
+                        <li><a href="#" data-page="services">Services</a></li>
+                        <li><a href="#" data-page="services">About Us</a></li>
+                        <li><a href="#" data-page="contact">Contact</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Policies</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="footer-link">Privacy Policy</a></li>
-                        <li><a href="#" class="footer-link">Terms &amp; Conditions</a></li>
-                        <li><a href="#" class="footer-link">Licensing</a></li>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns &amp; Refunds</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Contact</h3>
-                    <p class="mb-2"><i data-feather="map-pin" class="inline mr-2 w-4 h-4" aria-hidden="true"></i> TODO: Update address for print and online listings.</p>
-                    <p class="mb-2"><i data-feather="mail" class="inline mr-2 w-4 h-4" aria-hidden="true"></i> <a href="mailto:hello@tinytails.co.uk" class="footer-link">hello@tinytails.co.uk</a></p>
-                    <p><i data-feather="clock" class="inline mr-2 w-4 h-4" aria-hidden="true"></i> Mon-Sun: 8am-8pm</p>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info-footer">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Pet Street, Cheshire, UK</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>0800 123 4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@tinytails.co.uk</span>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
-                <p>© 2023 Tiny Tails Pet Services. All rights reserved.</p>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 Tiny Tails Pet Supplies &amp; Services. All rights reserved.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Page Navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all navigation links
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            // Add click event listeners to all navigation links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Get the target page from data attribute
+                    const targetPage = this.getAttribute('data-page');
+                    
+                    if (!targetPage) {
+                        return;
+                    }
+                    
+                    // Hide all pages
+                    document.querySelectorAll('.page').forEach(page => {
+                        page.classList.remove('active');
+                    });
+                    
+                    // Show the target page
+                    const target = document.getElementById(targetPage);
+                    if (target) {
+                        target.classList.add('active');
+                    }
+                    
+                    // Update active state in navigation
+                    navLinks.forEach(navLink => {
+                        navLink.classList.remove('active');
+                    });
+                    this.classList.add('active');
+                    
+                    // Scroll to top of page
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
+            
+            // Add to cart functionality
+            const addToCartButtons = document.querySelectorAll('.btn');
+            addToCartButtons.forEach(button => {
+                if (button.textContent.trim() === 'Add to Cart') {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const cartCount = document.querySelector('.cart-count');
+                        let count = parseInt(cartCount.textContent, 10);
+                        count++;
+                        cartCount.textContent = count;
+                        
+                        // Show a quick confirmation
+                        const originalText = button.textContent;
+                        button.textContent = 'Added!';
+                        button.style.backgroundColor = '#27ae60';
+                        
+                        setTimeout(() => {
+                            button.textContent = originalText;
+                            button.style.backgroundColor = '';
+                        }, 1500);
+                    });
+                }
+            });
+            
+            // Newsletter form submission
+            const newsletterForm = document.querySelector('.newsletter-form');
+            newsletterForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const emailInput = this.querySelector('input[type="email"]');
+                if (emailInput.value) {
+                    alert('Thank you for subscribing to our newsletter!');
+                    emailInput.value = '';
+                }
+            });
+            
+            // Contact form submission
+            const contactForm = document.querySelector('.contact-form form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your message! We will get back to you soon.');
+                    this.reset();
+                });
+            }
+        });
+    </script>
 </body>
 </html>
