@@ -171,13 +171,21 @@
             box-sizing: border-box;
         }
 
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px 40px;
+            width: 100%;
+            box-sizing: border-box;
+            gap: 20px;
+        }
+
         .header-content {
             display: flex;
-            justify-content: space-between;
             align-items: center;
             width: 100%;
-            padding: 10px 40px;
-            box-sizing: border-box;
+            gap: 20px;
         }
         
         .logo {
@@ -193,12 +201,21 @@
             max-width: none;
             margin-left: 20px;
             margin-top: 5px;
+            flex-shrink: 0;
         }
         
+        .header-right {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            gap: 20px;
+        }
+
         .search-bar {
             flex: 1;
             max-width: 500px;
-            margin: 0 20px;
+            margin: 0;
             position: relative;
         }
         
@@ -229,20 +246,20 @@
             font-size: 1.1rem;
         }
         
-        .header-actions {
+        .header-icons {
             display: flex;
             align-items: center;
+            gap: 20px;
         }
-        
-        .header-actions a {
-            margin-left: 20px;
+
+        .header-icons a {
             font-size: 1.2rem;
             color: var(--black);
             position: relative;
             transition: var(--transition);
         }
-        
-        .header-actions a:hover {
+
+        .header-icons a:hover {
             color: var(--dark-pink);
         }
         
@@ -1098,18 +1115,16 @@
         
         /* Responsive Styles */
         @media (max-width: 992px) {
-            .header-content {
-                flex-wrap: wrap;
+            .header {
+                padding: 15px 20px;
             }
-            
-            .logo {
-                margin-bottom: 15px;
+
+            .header-right {
+                gap: 15px;
             }
-            
+
             .search-bar {
-                order: 3;
                 max-width: 100%;
-                margin: 15px 0 0;
             }
             
             .about-content {
@@ -1132,6 +1147,21 @@
         }
         
         @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .header-right {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+
+            .search-bar {
+                width: 100%;
+            }
+
             .nav-links {
                 flex-direction: column;
             }
@@ -1194,21 +1224,23 @@
     <!-- Header -->
     <header>
         <div class="container main-header">
-            <div class="header-content">
+            <div class="header header-content">
                 <div class="logo">
                     <img src="images/TinyTailsLogo.jpg" alt="Tiny Tails Logo" class="site-logo">
                 </div>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search for products...">
-                    <button><i class="fas fa-search"></i></button>
-                </div>
-                <div class="header-actions">
-                    <a href="#"><i class="fas fa-user"></i></a>
-                    <a href="#"><i class="fas fa-heart"></i></a>
-                    <a href="#">
-                        <i class="fas fa-shopping-cart"></i>
-                        <span class="cart-count">3</span>
-                    </a>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search for products...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="header-icons">
+                        <a href="#"><i class="fas fa-user"></i></a>
+                        <a href="#"><i class="fas fa-heart"></i></a>
+                        <a href="#">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">3</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
