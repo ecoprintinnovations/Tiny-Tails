@@ -146,23 +146,38 @@
         .top-bar {
             background-color: var(--black);
             color: var(--white);
-            padding: 8px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 40px;
             font-size: 0.9rem;
         }
-        
+
         .top-bar-content {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin: 0;
         }
         
         .main-header {
-            padding: 15px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            box-sizing: border-box;
         }
-        
+
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            width: 100%;
+            padding: 10px 40px;
+            box-sizing: border-box;
         }
         
         .logo {
@@ -172,11 +187,12 @@
 
         .site-logo {
             display: block;
-            height: 90px;
-            max-height: 100px;
+            height: 110px;
+            max-height: 120px;
             width: auto;
             max-width: none;
             margin-left: 20px;
+            margin-top: 5px;
         }
         
         .search-bar {
@@ -250,10 +266,21 @@
         nav {
             background-color: var(--black);
         }
-        
+
+        nav .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 40px;
+            width: 100%;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
         .nav-links {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
+            width: 100%;
         }
         
         .nav-links li {
@@ -1133,11 +1160,11 @@
                 flex-direction: column;
                 text-align: center;
             }
-            
+
             .top-bar-content > div {
                 margin-bottom: 5px;
             }
-            
+
             .hero {
                 padding: 60px 0;
             }
@@ -1147,8 +1174,10 @@
             }
 
             .site-logo {
-                height: 60px;
-                margin-left: 10px;
+                height: 80px;
+                max-height: 90px;
+                margin-left: 15px;
+                margin-top: 5px;
             }
         }
     </style>
