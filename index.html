@@ -73,17 +73,19 @@
             transition: var(--transition);
             text-align: center;
         }
-        
+
         .btn:hover {
             background-color: var(--gray);
             transform: translateY(-2px);
         }
-        
-        .btn-pink {
+
+        .btn-pink,
+        .pink-btn {
             background-color: var(--dark-pink);
         }
-        
-        .btn-pink:hover {
+
+        .btn-pink:hover,
+        .pink-btn:hover {
             background-color: #ff8cb9;
         }
         
@@ -134,8 +136,12 @@
             min-height: 80vh;
             padding: 40px 0;
         }
-        
+
         .page.active {
+            display: block;
+        }
+
+        .page:target {
             display: block;
         }
         
@@ -1266,8 +1272,8 @@
             <div class="container hero-content">
                 <h2>Premium Products &amp; Loving Care for Your Furry Friends</h2>
                 <p>Discover our wide range of high-quality pet supplies and home-from-home care services for all your pet's needs.</p>
-                <a href="https://ecoprintinnovations.github.io/Tiny-Tails/#shop" class="btn" data-page="shop">Shop Now</a>
-                <a href="https://ecoprintinnovations.github.io/Tiny-Tails/#services" class="btn btn-pink" data-page="services" style="margin-left: 15px;">Our Services</a>
+                <a href="#shop" class="btn black-btn">Shop Now</a>
+                <a href="#services" class="btn pink-btn" style="margin-left: 15px;">Our Services</a>
             </div>
         </section>
 
