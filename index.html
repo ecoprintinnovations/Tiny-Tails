@@ -163,16 +163,14 @@
             margin: 0;
         }
         
-        .main-header {
-            padding: 16px 0;
-        }
-
         .site-header {
             display: grid;
-            grid-template-columns: 1fr minmax(420px, 720px) 1fr;
+            grid-template-columns: auto 1fr auto;
             align-items: center;
             gap: 24px;
-            padding: 16px 32px;
+            padding: 16px 40px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         .header-left {
@@ -182,31 +180,31 @@
         .header-centre {
             justify-self: center;
             width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            max-width: 900px;
+        }
+
+        .header-centre input[type="text"],
+        .header-centre .search-bar {
+            width: 100%;
+            max-width: 100%;
         }
 
         .header-right {
             justify-self: end;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
+            gap: 20px;
         }
 
         .site-logo {
-            display: block;
-            height: 195px;
+            height: 180px;
             width: auto;
-            position: relative;
-            left: 0;
             margin-left: 0;
-            padding-left: 0;
+            display: block;
         }
-        
+
         .search-bar {
-            flex: 0 1 520px;
-            width: min(520px, 100%);
+            width: 100%;
             position: relative;
         }
         
@@ -237,21 +235,14 @@
             font-size: 1.1rem;
         }
         
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .header-actions a {
-            margin-left: 0;
+        .header-right a {
             font-size: 1.2rem;
             color: var(--black);
             position: relative;
             transition: var(--transition);
         }
-        
-        .header-actions a:hover {
+
+        .header-right a:hover {
             color: var(--dark-pink);
         }
         
@@ -274,6 +265,11 @@
         /* Navigation */
         nav {
             background-color: var(--black);
+            padding: 0 40px;
+        }
+
+        nav .nav-inner {
+            max-width: none;
         }
 
         .nav-inner {
@@ -1128,9 +1124,6 @@
 
             .header-right {
                 justify-self: center;
-            }
-
-            .header-actions {
                 justify-content: center;
             }
             
@@ -1218,27 +1211,23 @@
 
     <!-- Header -->
     <header>
-        <div class="container-xl main-header">
-            <div class="site-header">
-                <div class="header-left">
-                    <img src="images/TinyTailsLogo.jpg" alt="Tiny Tails Logo" class="site-logo">
+        <div class="site-header">
+            <div class="header-left">
+                <img src="images/TinyTailsLogo.jpg" alt="Tiny Tails Logo" class="site-logo">
+            </div>
+            <div class="header-centre">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products...">
+                    <button><i class="fas fa-search"></i></button>
                 </div>
-                <div class="header-centre">
-                    <div class="search-bar">
-                        <input type="text" placeholder="Search for products...">
-                        <button><i class="fas fa-search"></i></button>
-                    </div>
-                </div>
-                <div class="header-right">
-                    <div class="header-actions">
-                        <a href="#"><i class="fas fa-user"></i></a>
-                        <a href="#"><i class="fas fa-heart"></i></a>
-                        <a href="#">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span class="cart-count">3</span>
-                        </a>
-                    </div>
-                </div>
+            </div>
+            <div class="header-right">
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-heart"></i></a>
+                <a href="#">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">3</span>
+                </a>
             </div>
         </div>
 
