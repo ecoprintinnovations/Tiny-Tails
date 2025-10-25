@@ -167,39 +167,36 @@
             padding: 16px 0;
         }
 
-        .header-content {
+        .site-header {
             display: grid;
-            grid-template-columns: 1fr auto 1fr;
+            grid-template-columns: 1fr minmax(420px, 720px) 1fr;
             align-items: center;
-            column-gap: 24px;
-            width: 100%;
+            gap: 24px;
+            padding: 16px 32px;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            grid-column: 1 / 2;
+        .header-left {
             justify-self: start;
         }
 
-        .header-center {
-            grid-column: 2 / 3;
+        .header-centre {
+            justify-self: center;
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 24px;
         }
 
-        .header-spacer {
-            grid-column: 3 / 4;
-            height: 0;
-            visibility: hidden;
+        .header-right {
+            justify-self: end;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
         }
 
         .site-logo {
             display: block;
-            height: 130px;
+            height: 195px;
             width: auto;
             position: relative;
             left: 0;
@@ -1109,14 +1106,15 @@
         
         /* Responsive Styles */
         @media (max-width: 992px) {
-            .header-content {
+            .site-header {
                 grid-template-columns: 1fr;
                 row-gap: 16px;
                 text-align: center;
                 justify-items: center;
+                padding: 16px 24px;
             }
 
-            .logo {
+            .header-left {
                 justify-self: center;
             }
 
@@ -1124,17 +1122,16 @@
                 width: 100%;
             }
 
-            .header-center {
-                flex-direction: column;
+            .header-centre {
                 width: 100%;
+            }
+
+            .header-right {
+                justify-self: center;
             }
 
             .header-actions {
                 justify-content: center;
-            }
-
-            .header-spacer {
-                display: none;
             }
             
             .about-content {
@@ -1200,7 +1197,7 @@
             }
 
             .site-logo {
-                height: 90px;
+                height: 135px;
                 width: auto;
                 position: relative;
                 left: 0;
@@ -1222,15 +1219,17 @@
     <!-- Header -->
     <header>
         <div class="container-xl main-header">
-            <div class="header-content">
-                <div class="logo">
+            <div class="site-header">
+                <div class="header-left">
                     <img src="images/TinyTailsLogo.jpg" alt="Tiny Tails Logo" class="site-logo">
                 </div>
-                <div class="header-center">
+                <div class="header-centre">
                     <div class="search-bar">
                         <input type="text" placeholder="Search for products...">
                         <button><i class="fas fa-search"></i></button>
                     </div>
+                </div>
+                <div class="header-right">
                     <div class="header-actions">
                         <a href="#"><i class="fas fa-user"></i></a>
                         <a href="#"><i class="fas fa-heart"></i></a>
@@ -1240,7 +1239,6 @@
                         </a>
                     </div>
                 </div>
-                <div class="header-spacer" aria-hidden="true"></div>
             </div>
         </div>
 
