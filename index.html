@@ -178,6 +178,7 @@
         .logo {
             display: flex;
             align-items: center;
+            justify-content: flex-start;
             grid-column: 1 / 2;
             justify-self: start;
         }
@@ -198,12 +199,12 @@
 
         .site-logo {
             display: block;
-            height: 110px;
-            max-height: 120px;
+            height: 130px;
             width: auto;
-            max-width: none;
-            margin-left: 20px;
-            margin-top: 5px;
+            position: relative;
+            left: 0;
+            margin-left: 0;
+            padding-left: 0;
         }
         
         .search-bar {
@@ -1199,10 +1200,12 @@
             }
 
             .site-logo {
-                height: 80px;
-                max-height: 90px;
-                margin-left: 15px;
-                margin-top: 5px;
+                height: 90px;
+                width: auto;
+                position: relative;
+                left: 0;
+                margin-left: 0;
+                padding-left: 0;
             }
         }
     </style>
