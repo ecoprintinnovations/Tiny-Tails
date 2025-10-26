@@ -1276,7 +1276,7 @@
             <div class="container hero-content">
                 <h2>Premium Products &amp; Loving Care for Your Furry Friends</h2>
                 <p>Discover our wide range of high-quality pet supplies and home-from-home care services for all your pet's needs.</p>
-                <a href="#shop-all-products" class="btn black-btn">Shop Now</a>
+                <a href="#shop-all-products" class="btn black-btn hero-shop-btn">Shop Now</a>
                 <a href="#services" class="btn pink-btn" style="margin-left: 15px;">Our Services</a>
             </div>
         </section>
@@ -2148,10 +2148,10 @@
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    
+
                     // Get the target page from data attribute
                     const targetPage = this.getAttribute('data-page');
-                    
+
                     if (!targetPage) {
                         return;
                     }
@@ -2177,6 +2177,42 @@
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
             });
+
+            // Hero "Shop Now" button should take users directly to the Shop All Products section
+            const heroShopButton = document.querySelector('.hero-shop-btn');
+            if (heroShopButton) {
+                heroShopButton.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    // Activate the shop page
+                    document.querySelectorAll('.page').forEach(page => {
+                        page.classList.remove('active');
+                    });
+
+                    const shopPage = document.getElementById('shop');
+                    if (shopPage) {
+                        shopPage.classList.add('active');
+                    }
+
+                    // Update the navigation to reflect the active page
+                    navLinks.forEach(navLink => {
+                        navLink.classList.remove('active');
+                    });
+                    const shopNavLink = document.querySelector('.nav-link[data-page="shop"]');
+                    if (shopNavLink) {
+                        shopNavLink.classList.add('active');
+                    }
+
+                    // Scroll smoothly to the Shop All Products section
+                    const shopAllSection = document.getElementById('shop-all-products');
+                    if (shopAllSection) {
+                        shopAllSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+
+                    // Update the URL hash so the browser reflects the section
+                    history.replaceState(null, '', '#shop-all-products');
+                });
+            }
             
             // Add to cart functionality
             const addToCartButtons = document.querySelectorAll('.btn');
