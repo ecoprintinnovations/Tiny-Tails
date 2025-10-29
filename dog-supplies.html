@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Supplies | Tiny Tails</title>
+    <meta name="description" content="Shop dog supplies at Tiny Tails — food, treats, toys, beds, collars &amp; leads, grooming, healthcare and more.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-ku7IhQ+0N3BqLrjGZm4G6dkprdFM5lTyBC0bYKT1eZqUPVHtVHCnRvWmvMRGsiE9zM9j3UJ46jcVoL4z6jY5xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+        :root {
+            --pink: #ffdfea;
+            --dark-pink: #ffb6d1;
+            --black: #1a1a1a;
+            --gray: #333;
+            --light-gray: #f5f5f5;
+            --white: #ffffff;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--white);
+            color: var(--black);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container,
+        .container-xl {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 30px;
+            border: none;
+            background-color: var(--black);
+            color: var(--white);
+            font-weight: 600;
+            transition: var(--transition);
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .black-btn {
+            background-color: var(--black);
+        }
+
+        .pink-btn,
+        .btn-pink {
+            background-color: var(--dark-pink);
+        }
+
+        .pink-btn:hover,
+        .btn-pink:hover {
+            background-color: #ff8cb9;
+            color: var(--white);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--dark-pink);
+            color: var(--dark-pink);
+        }
+
+        .btn-outline:hover {
+            background: var(--dark-pink);
+            color: var(--white);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.4rem;
+            margin-bottom: 12px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: -10px;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--dark-pink);
+        }
+
+        .section-title p {
+            max-width: 620px;
+            margin: 0 auto;
+            color: var(--gray);
+        }
+
+        .top-bar {
+            background-color: var(--black);
+            color: var(--white);
+            font-size: 0.9rem;
+        }
+
+        .top-bar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 0;
+        }
+
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .site-header {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 24px;
+            align-items: center;
+            padding: 16px 40px;
+        }
+
+        .site-logo {
+            height: 180px;
+            width: auto;
+        }
+
+        .header-centre {
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .search-bar {
+            width: 100%;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 12px 20px;
+            border-radius: 30px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .search-bar input:focus {
+            border-color: var(--dark-pink);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(255, 182, 209, 0.25);
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--dark-pink);
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .header-right {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .header-right a {
+            color: var(--black);
+            font-size: 1.2rem;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .header-right a:hover {
+            color: var(--dark-pink);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: var(--dark-pink);
+            color: var(--white);
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        nav {
+            background-color: var(--black);
+        }
+
+        .nav-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links li {
+            position: relative;
+        }
+
+        .nav-links a {
+            display: block;
+            padding: 15px 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--white);
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            background-color: var(--dark-pink);
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 220px;
+            background: var(--white);
+            box-shadow: var(--shadow);
+            border-radius: 6px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: var(--transition);
+            z-index: 10;
+        }
+
+        .nav-links li:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown a {
+            color: var(--black);
+            padding: 12px 16px;
+            text-transform: none;
+        }
+
+        .dropdown a:hover {
+            background: var(--pink);
+        }
+
+        main {
+            background-color: var(--white);
+        }
+
+        .breadcrumb {
+            background: var(--light-gray);
+            padding: 16px 0;
+        }
+
+        .breadcrumb nav {
+            background: none;
+        }
+
+        .breadcrumb ol {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .breadcrumb li {
+            color: var(--gray);
+        }
+
+        .breadcrumb li+li::before {
+            content: '\203A';
+            margin-right: 8px;
+            color: var(--gray);
+        }
+
+        .hero {
+            position: relative;
+            color: var(--white);
+            text-align: center;
+            padding: 120px 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.45);
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 32px;
+        }
+
+        .dog-hero {
+            background: linear-gradient(rgba(26, 26, 26, 0.45), rgba(26, 26, 26, 0.45)), url('images/dog-supplies/hero/dog-supplies-hero.svg') center/cover;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .category-hub {
+            background: var(--white);
+        }
+
+        .category-icon-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 24px;
+            margin-bottom: 50px;
+        }
+
+        .category-icon-card {
+            background: var(--pink);
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .category-icon-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .category-icon-card .icon-wrap {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 16px auto;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 4px solid var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .category-icon-card span {
+            font-weight: 600;
+            display: block;
+        }
+
+        .category-tile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+
+        .category-tile {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .category-tile:hover {
+            transform: translateY(-8px);
+        }
+
+        .category-tile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .category-tile::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.55) 100%);
+        }
+
+        .category-tile-content {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            right: 20px;
+            color: var(--white);
+            z-index: 1;
+        }
+
+        .category-tile-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .category-tile-content .btn-outline {
+            border-color: var(--white);
+            color: var(--white);
+        }
+
+        .category-tile-content .btn-outline:hover {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .product-section {
+            background: var(--light-gray);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-img {
+            position: relative;
+            padding: 20px;
+            background: var(--pink);
+        }
+
+        .product-img img {
+            width: 100%;
+            height: auto;
+        }
+
+        .product-info {
+            padding: 24px;
+            flex: 1 1 auto;
+        }
+
+        .product-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .product-info p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 14px;
+        }
+
+        .product-price {
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .product-price small {
+            display: block;
+            font-weight: 400;
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+
+        .promo-banner {
+            margin-top: 40px;
+            border-radius: 20px;
+            padding: 40px;
+            background: linear-gradient(135deg, var(--black), #3a3a3a);
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            text-align: center;
+        }
+
+        .promo-banner span {
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--dark-pink);
+        }
+
+        .promo-banner h3 {
+            font-size: 2rem;
+        }
+
+        .brands-section {
+            background: var(--white);
+        }
+
+        .brands-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 24px;
+            align-items: center;
+        }
+
+        .brand-logo {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 18px;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120px;
+        }
+
+        .brand-logo img {
+            max-height: 60px;
+            filter: grayscale(100%);
+            transition: var(--transition);
+        }
+
+        .brand-logo:hover img {
+            filter: grayscale(0%);
+        }
+
+        .promo-duo {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .promo-card {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: var(--white);
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .promo-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .promo-card-content {
+            padding: 28px;
+        }
+
+        .promo-card-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        .promo-card-content p {
+            color: var(--gray);
+            margin-bottom: 18px;
+        }
+
+        .advice-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .advice-card {
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: var(--white);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .advice-thumb {
+            position: relative;
+        }
+
+        .advice-thumb img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 182, 209, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            font-size: 1.4rem;
+        }
+
+        .advice-content {
+            padding: 24px;
+        }
+
+        .advice-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .advice-content p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .reviews {
+            background: var(--light-gray);
+        }
+
+        .reviews-wrapper {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .rating-summary {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .rating-score {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .rating-stars {
+            color: #ffc107;
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+
+        .review-carousel {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+            scroll-snap-type: x mandatory;
+        }
+
+        .review-card {
+            flex: 0 0 260px;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: var(--shadow);
+            scroll-snap-align: start;
+        }
+
+        .review-card h4 {
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        .review-card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .why-shop {
+            background: var(--white);
+        }
+
+        .usp-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+
+        .usp-card {
+            padding: 30px;
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            background: var(--pink);
+        }
+
+        .usp-card i {
+            font-size: 2rem;
+            margin-bottom: 16px;
+            color: var(--black);
+        }
+
+        .usp-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .brand-story {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 1.05rem;
+            color: var(--gray);
+        }
+
+        #shop-all-products {
+            padding: 80px 0;
+            background: var(--pink);
+        }
+
+        #shop-all-products .category-group {
+            margin-bottom: 50px;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+        }
+
+        #shop-all-products .category-group:last-of-type {
+            margin-bottom: 0;
+        }
+
+        #shop-all-products h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        #shop-all-products h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background: var(--black);
+            color: var(--white);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            padding: 70px 0 40px 0;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 18px;
+            font-size: 1.2rem;
+        }
+
+        .footer-column p,
+        .footer-links li a,
+        .contact-info-footer li span {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links li a:hover {
+            color: var(--dark-pink);
+        }
+
+        .social-links-footer {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .social-links-footer a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            transition: var(--transition);
+        }
+
+        .social-links-footer a:hover {
+            background: var(--dark-pink);
+        }
+
+        .contact-info-footer li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            padding: 18px 0;
+            font-size: 0.9rem;
+        }
+
+        #categories,
+        #offers,
+        #brands,
+        #just-arrived,
+        #bestsellers,
+        #advice,
+        #reviews,
+        #why-shop,
+        #shop-all-products,
+        [id^="cat-"] {
+            scroll-margin-top: 140px;
+        }
+
+        @media (max-width: 992px) {
+            .site-header {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .header-right {
+                justify-content: center;
+            }
+
+            .top-bar-content {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .reviews-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .site-logo {
+                height: 140px;
+            }
+
+            .hero {
+                padding: 90px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+
+            .promo-card img {
+                height: 200px;
+            }
+
+            .category-icon-row {
+                grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            }
+        }
+
+        @media (max-width: 576px) {
+            .site-header {
+                padding: 16px 24px;
+            }
+
+            .nav-links a {
+                padding: 12px 14px;
+            }
+
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .promo-banner {
+                padding: 30px 20px;
+            }
+
+            .product-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .review-card {
+                flex: 0 0 220px;
+            }
+
+            .footer-content {
+                padding: 50px 0 30px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div>Free shipping on orders over £50</div>
+            <div>Call us: 0800 123 4567</div>
+        </div>
+    </div>
+
+    <header>
+        <div class="site-header">
+            <div class="header-left">
+                <img src="images/TinyTailsLogoCroped.jpg" alt="Tiny Tails Logo" class="site-logo">
+            </div>
+            <div class="header-centre">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for products...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="header-right">
+                <a href="#"><i class="fas fa-user"></i></a>
+                <a href="#"><i class="fas fa-heart"></i></a>
+                <a href="#">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">3</span>
+                </a>
+            </div>
+        </div>
+        <nav>
+            <div class="container-xl nav-inner">
+                <ul class="nav-links">
+                    <li><a href="/index.html" class="nav-link" data-page="home">Home</a></li>
+                    <li><a href="/dog-supplies.html" class="nav-link active">Dog Supplies</a></li>
+                    <li>
+                        <a href="#" class="nav-link" data-page="shop">Shop <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown">
+                            <a href="#" class="nav-link" data-page="dog-supplies">Dog Supplies</a>
+                            <a href="#" class="nav-link" data-page="cat-supplies">Cat Supplies</a>
+                            <a href="#" class="nav-link" data-page="small-pets">Small Pets</a>
+                            <a href="#" class="nav-link" data-page="birds-reptiles">Birds &amp; Reptiles</a>
+                        </div>
+                    </li>
+                    <li><a href="#" class="nav-link" data-page="services">Services</a></li>
+                    <li><a href="#" class="nav-link" data-page="new-arrivals">New Arrivals</a></li>
+                    <li><a href="#" class="nav-link" data-page="sale">Sale</a></li>
+                    <li><a href="#" class="nav-link" data-page="brands">Brands</a></li>
+                    <li><a href="#" class="nav-link" data-page="blog">Blog</a></li>
+                    <li><a href="#" class="nav-link" data-page="contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="breadcrumb">
+            <div class="container">
+                <ol>
+                    <li><a href="/index.html">Home</a></li>
+                    <li>Dog Supplies</li>
+                </ol>
+            </div>
+        </div>
+
+        <section class="hero dog-hero">
+            <div class="container">
+                <h1>Dog Supplies</h1>
+                <p>Everything your dog needs in one place.</p>
+                <div class="cta-group">
+                    <a href="#categories" class="btn black-btn">Browse Categories</a>
+                    <a href="#bestsellers" class="btn pink-btn">Bestsellers</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="category-hub section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Explore by Need</h2>
+                    <p>Shop nutritious food, everyday comforts and the accessories that keep tails wagging.</p>
+                </div>
+                <div class="category-icon-row">
+                    <a href="#cat-food" class="category-icon-card">
+                        <div class="icon-wrap">
+                            <img src="images/dog-supplies/categories/food-icon.svg" alt="Dog food bowl icon" width="120" height="120" loading="lazy" decoding="async">
+                        </div>
+                        <span>Food</span>
+                    </a>
+                    <a href="#cat-treats" class="category-icon-card">
+                        <div class="icon-wrap">
+                            <img src="images/dog-supplies/categories/treats-icon.svg" alt="Dog treats icon" width="120" height="120" loading="lazy" decoding="async">
+                        </div>
+                        <span>Treats</span>
+                    </a>
+                    <a href="#cat-toys" class="category-icon-card">
+                        <div class="icon-wrap">
+                            <img src="images/dog-supplies/categories/toys-icon.svg" alt="Dog toys icon" width="120" height="120" loading="lazy" decoding="async">
+                        </div>
+                        <span>Toys</span>
+                    </a>
+                    <a href="#cat-beds" class="category-icon-card">
+                        <div class="icon-wrap">
+                            <img src="images/dog-supplies/categories/beds-icon.svg" alt="Dog beds icon" width="120" height="120" loading="lazy" decoding="async">
+                        </div>
+                        <span>Beds</span>
+                    </a>
+                    <a href="#cat-collars" class="category-icon-card">
+                        <div class="icon-wrap">
+                            <img src="images/dog-supplies/categories/collars-icon.svg" alt="Collars and leads icon" width="120" height="120" loading="lazy" decoding="async">
+                        </div>
+                        <span>Collars &amp; Leads</span>
+                    </a>
+                </div>
+                <div class="category-tile-grid">
+                    <a href="#cat-puppy" class="category-tile">
+                        <img src="images/dog-supplies/tiles/puppy-essentials.svg" alt="Puppy essentials" width="800" height="600" loading="lazy" decoding="async">
+                        <div class="category-tile-content">
+                            <h3>Puppy Essentials</h3>
+                            <span class="btn btn-outline">Shop Puppy</span>
+                        </div>
+                    </a>
+                    <a href="#cat-healthcare" class="category-tile">
+                        <img src="images/dog-supplies/tiles/healthcare.svg" alt="Dog healthcare" width="800" height="600" loading="lazy" decoding="async">
+                        <div class="category-tile-content">
+                            <h3>Healthcare</h3>
+                            <span class="btn btn-outline">Shop Healthcare</span>
+                        </div>
+                    </a>
+                    <a href="#cat-travel" class="category-tile">
+                        <img src="images/dog-supplies/tiles/travel.svg" alt="Dog travel essentials" width="800" height="600" loading="lazy" decoding="async">
+                        <div class="category-tile-content">
+                            <h3>Travel</h3>
+                            <span class="btn btn-outline">Shop Travel</span>
+                        </div>
+                    </a>
+                    <a href="#cat-training" class="category-tile">
+                        <img src="images/dog-supplies/tiles/training.svg" alt="Dog training tools" width="800" height="600" loading="lazy" decoding="async">
+                        <div class="category-tile-content">
+                            <h3>Training</h3>
+                            <span class="btn btn-outline">Shop Training</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="offers" class="product-section section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>This Month’s Offers</h2>
+                    <p>Limited-time savings on the dog favourites you reach for every day.</p>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/gourmet-meal.svg" alt="Tiny Tails gourmet dog meal" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>Gourmet Meadow Feast</h3>
+                            <p>Grain-free recipe with freshly prepared lamb and garden vegetables.</p>
+                            <div class="product-price">£18.99 <small>2kg bag</small></div>
+                            <a href="#shop-all-products" class="btn black-btn">Add to Basket</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/crunchy-biscuits.svg" alt="Crunchy dental biscuits" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>Crunchy Dental Biscuits</h3>
+                            <p>Mint and parsley treats that keep teeth gleaming and breath fresh.</p>
+                            <div class="product-price">£6.50 <small>Pack of 24</small></div>
+                            <a href="#shop-all-products" class="btn pink-btn">Add to Basket</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/snuggle-bed.svg" alt="Snuggle memory foam dog bed" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>Snuggle Memory Foam Bed</h3>
+                            <p>Cocooning bolster edges and washable cover for the cosiest naps.</p>
+                            <div class="product-price">£54.00 <small>Medium</small></div>
+                            <a href="#shop-all-products" class="btn black-btn">View Product</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/glow-collar.svg" alt="Rechargeable glow collar" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>GlowSafe Night Collar</h3>
+                            <p>Rechargeable LED collar with three light modes for evening walkies.</p>
+                            <div class="product-price">£22.00 <small>One size, adjustable</small></div>
+                            <a href="#shop-all-products" class="btn pink-btn">Add to Basket</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/gentle-shampoo.svg" alt="Gentle oat shampoo" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>Gentle Oat Shampoo</h3>
+                            <p>Soap-free cleanse with aloe and chamomile for sensitive coats.</p>
+                            <div class="product-price">£8.75 <small>300ml</small></div>
+                            <a href="#shop-all-products" class="btn black-btn">Add to Basket</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/daily-vitamins.svg" alt="Daily dog vitamins" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>Daily Vitality Chews</h3>
+                            <p>Multivitamin bites supporting joints, digestion and shiny coats.</p>
+                            <div class="product-price">£14.20 <small>Jar of 60</small></div>
+                            <a href="#shop-all-products" class="btn pink-btn">Add to Basket</a>
+                        </div>
+                    </article>
+                </div>
+                <div class="promo-banner" role="complementary">
+                    <span>Price Lock Promise</span>
+                    <h3>More than 1,000 everyday essentials held at or below 2023 prices.</h3>
+                    <p>Shop with confidence knowing your pup’s staples stay affordable all year round.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="brands" class="brands-section section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Popular Dog Brands</h2>
+                    <p>Discover trusted makers renowned for quality recipes, craftsmanship and innovation.</p>
+                </div>
+                <div class="brands-grid" role="list">
+                    <div class="brand-logo" role="listitem">
+                        <img src="images/brands/canagan-logo.svg" alt="Canagan logo" width="200" height="120" loading="lazy" decoding="async">
+                    </div>
+                    <div class="brand-logo" role="listitem">
+                        <img src="images/brands/frogg-logo.svg" alt="Frogg logo" width="200" height="120" loading="lazy" decoding="async">
+                    </div>
+                    <div class="brand-logo" role="listitem">
+                        <img src="images/brands/more-logo.svg" alt="More logo" width="200" height="120" loading="lazy" decoding="async">
+                    </div>
+                    <div class="brand-logo" role="listitem">
+                        <img src="images/brands/tribal-logo.svg" alt="Tribal logo" width="200" height="120" loading="lazy" decoding="async">
+                    </div>
+                    <div class="brand-logo" role="listitem">
+                        <img src="images/brands/greenelk-logo.svg" alt="Green Elk logo" width="200" height="120" loading="lazy" decoding="async">
+                    </div>
+                    <div class="brand-logo" role="listitem">
+                        <img src="images/brands/greatsmall-logo.svg" alt="Great &amp; Small logo" width="200" height="120" loading="lazy" decoding="async">
+                    </div>
+                    <div class="brand-logo" role="listitem">
+                        <img src="images/brands/yora-logo.svg" alt="Yora logo" width="200" height="120" loading="lazy" decoding="async">
+                    </div>
+                    <div class="brand-logo" role="listitem">
+                        <img src="images/brands/barkers-logo.svg" alt="Barkers logo" width="200" height="120" loading="lazy" decoding="async">
+                    </div>
+                    <div class="brand-logo" role="listitem">
+                        <img src="images/brands/purely-logo.svg" alt="Purely Pets logo" width="200" height="120" loading="lazy" decoding="async">
+                    </div>
+                    <div class="brand-logo" role="listitem">
+                        <img src="images/brands/tailwind-logo.svg" alt="Tailwind logo" width="200" height="120" loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="just-arrived" class="product-section section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Just Arrived</h2>
+                    <p>Freshly launched gear selected by our canine specialists.</p>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/chew-toy.svg" alt="Honeycomb chew toy" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>Honeycomb Chew Buddy</h3>
+                            <p>Durable natural rubber toy with hidden treat pockets for enrichment play.</p>
+                            <div class="product-price">£12.50</div>
+                            <a href="#shop-all-products" class="btn black-btn">Add to Basket</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/training-treats.svg" alt="Soft training treats" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>Soft Training Nibbles</h3>
+                            <p>Mini salmon bites under three calories each for quick-fire rewards.</p>
+                            <div class="product-price">£4.99</div>
+                            <a href="#shop-all-products" class="btn pink-btn">Add to Basket</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/travel-bag.svg" alt="Weekend travel bag" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>Weekender Travel Bag</h3>
+                            <p>Organised compartments for meals, toys and leads with collapsible bowls.</p>
+                            <div class="product-price">£39.00</div>
+                            <a href="#shop-all-products" class="btn black-btn">View Product</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/calming-spray.svg" alt="Calming spray" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>Calming Lavender Spray</h3>
+                            <p>Aromatherapy mist for travel crates, cosy corners and bedtime routines.</p>
+                            <div class="product-price">£11.50</div>
+                            <a href="#shop-all-products" class="btn pink-btn">Add to Basket</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/dental-sticks.svg" alt="Dental sticks" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>Ocean Fresh Dental Sticks</h3>
+                            <p>Seaweed-powered sticks to reduce plaque and keep gums healthy.</p>
+                            <div class="product-price">£7.30</div>
+                            <a href="#shop-all-products" class="btn black-btn">Add to Basket</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="section-padding brands-section">
+            <div class="container">
+                <div class="promo-duo">
+                    <article class="promo-card">
+                        <img src="images/dog-supplies/promos/gift-cards.svg" alt="Tiny Tails gift card" width="900" height="600" loading="lazy" decoding="async">
+                        <div class="promo-card-content">
+                            <h3>Share the Tiny Tails Love</h3>
+                            <p>Let friends choose the goodies their dog adores with a Tiny Tails gift card.</p>
+                            <a href="#shop-all-products" class="btn black-btn">Shop Gift Cards</a>
+                        </div>
+                    </article>
+                    <article class="promo-card">
+                        <img src="images/dog-supplies/promos/mix-match-treats.svg" alt="Mix and match dog treats" width="900" height="600" loading="lazy" decoding="async">
+                        <div class="promo-card-content">
+                            <h3>Mix &amp; Match Treats</h3>
+                            <p>Pick any three natural treat pouches and save 15% on your basket.</p>
+                            <a href="#cat-treats" class="btn pink-btn">Build Your Bundle</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="bestsellers" class="product-section section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Bestsellers</h2>
+                    <p>The tried-and-tested essentials our community recommends again and again.</p>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/gourmet-meal.svg" alt="Gourmet dog meal" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>Slow-Roasted Free Range</h3>
+                            <p>High-protein kibble with sweet potato and botanicals for daily vitality.</p>
+                            <div class="product-price">From £16.99</div>
+                            <a href="#cat-food" class="btn black-btn">Add to Basket</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/dental-sticks.svg" alt="Dental chews" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>Fresh Breath Dental Chews</h3>
+                            <p>Natural sea kelp formula to reduce tartar between professional cleans.</p>
+                            <div class="product-price">£8.20</div>
+                            <a href="#cat-healthcare" class="btn pink-btn">Add to Basket</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/snuggle-bed.svg" alt="Memory foam bed" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>CloudSoft Orthopaedic Bed</h3>
+                            <p>Pressure-relieving foam with plush faux fur topper for joint support.</p>
+                            <div class="product-price">£69.00</div>
+                            <a href="#cat-beds" class="btn black-btn">View Product</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/luxury-lead.svg" alt="Luxury dog lead" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>Heritage Leather Lead</h3>
+                            <p>Hand-stitched leather lead with brass hardware and padded handle.</p>
+                            <div class="product-price">£32.50</div>
+                            <a href="#cat-collars" class="btn pink-btn">Add to Basket</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/training-treats.svg" alt="Training treats" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>Training Reward Trio</h3>
+                            <p>Chicken, cheese and liver morsels in a resealable pouch.</p>
+                            <div class="product-price">£5.40</div>
+                            <a href="#cat-training" class="btn black-btn">Add to Basket</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/chew-toy.svg" alt="Durable chew toy" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>Eco Rope Tug</h3>
+                            <p>Recycled cotton rope toy for tug-of-war and fetch fans.</p>
+                            <div class="product-price">£9.99</div>
+                            <a href="#cat-toys" class="btn pink-btn">Add to Basket</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/gentle-shampoo.svg" alt="Gentle shampoo" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>Soothing Spa Shampoo</h3>
+                            <p>Oat silk and coconut cleansers for a shiny, tangle-free coat.</p>
+                            <div class="product-price">£9.50</div>
+                            <a href="#cat-healthcare" class="btn black-btn">Add to Basket</a>
+                        </div>
+                    </article>
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="images/dog-supplies/products/glow-collar.svg" alt="Safety collar" width="320" height="320" loading="lazy" decoding="async">
+                        </div>
+                        <div class="product-info">
+                            <h3>GlowSafe Rechargeable Collar</h3>
+                            <p>360° illumination keeps your dog visible on darker strolls.</p>
+                            <div class="product-price">£24.00</div>
+                            <a href="#cat-collars" class="btn pink-btn">Add to Basket</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="advice" class="brands-section section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Advice Hub</h2>
+                    <p>Expert tips to help you make confident choices for your canine companion.</p>
+                </div>
+                <div class="advice-grid">
+                    <a href="/advice/how-to-fit-a-dog-coat" class="advice-card">
+                        <div class="advice-thumb">
+                            <img src="images/dog-supplies/advice/perfect-fit.svg" alt="Dog coat fitting advice" width="800" height="450" loading="lazy" decoding="async">
+                            <span class="play-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+                        </div>
+                        <div class="advice-content">
+                            <h3>Dog Coats: How to Get the Perfect Fit</h3>
+                            <p>Measure like a pro with our quick video guide and printable size chart.</p>
+                        </div>
+                    </a>
+                    <a href="/advice/dog-id-tag-laws" class="advice-card">
+                        <div class="advice-thumb">
+                            <img src="images/dog-supplies/advice/id-tags.svg" alt="Dog with ID tag" width="800" height="450" loading="lazy" decoding="async">
+                            <span class="play-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+                        </div>
+                        <div class="advice-content">
+                            <h3>Dogs &amp; The Law: Our Guide to ID Tags</h3>
+                            <p>Everything you need to engrave to stay compliant and keep pups safe.</p>
+                        </div>
+                    </a>
+                    <a href="/advice/chew-toy-safety" class="advice-card">
+                        <div class="advice-thumb">
+                            <img src="images/dog-supplies/advice/chew-safety.svg" alt="Dog chewing toy" width="800" height="450" loading="lazy" decoding="async">
+                            <span class="play-icon" aria-hidden="true"><i class="fas fa-play"></i></span>
+                        </div>
+                        <div class="advice-content">
+                            <h3>Chewing Safety for Dogs</h3>
+                            <p>Choose the right textures for your dog’s age, breed and play style.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Reviews</h2>
+                    <p>Real feedback from Tiny Tails customers across the UK.</p>
+                </div>
+                <div class="reviews-wrapper">
+                    <div class="rating-summary">
+                        <div class="rating-score" aria-label="Average rating">4.8</div>
+                        <div class="rating-stars" aria-hidden="true">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>Based on 1,250 verified reviews this month.</p>
+                    </div>
+                    <div class="review-carousel" aria-live="polite">
+                        <article class="review-card">
+                            <h4>“Everything arrived next day”</h4>
+                            <div class="rating-stars" aria-hidden="true">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>Great choice of natural food. Delivery updates were spot on and my spaniel loves the new kibble.</p>
+                            <p><strong>Amelia, Kent</strong></p>
+                        </article>
+                        <article class="review-card">
+                            <h4>“Helpful sizing advice”</h4>
+                            <div class="rating-stars" aria-hidden="true">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>Live chat guided me to the right harness fit and it’s made walks so much calmer.</p>
+                            <p><strong>Lewis, Manchester</strong></p>
+                        </article>
+                        <article class="review-card">
+                            <h4>“My go-to for treats”</h4>
+                            <div class="rating-stars" aria-hidden="true">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <p>Brilliant variety and the mix &amp; match offer keeps my lab’s treat tin topped up.</p>
+                            <p><strong>Sophie, Glasgow</strong></p>
+                        </article>
+                        <article class="review-card">
+                            <h4>“Quality you can feel”</h4>
+                            <div class="rating-stars" aria-hidden="true">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                            <p>The new orthopaedic bed is beautifully made and my senior collie settled instantly.</p>
+                            <p><strong>Hannah, Surrey</strong></p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-shop" class="why-shop section-padding">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Why Shop With Tiny Tails</h2>
+                    <p>We combine specialist know-how with a passion for pets to make caring easy.</p>
+                </div>
+                <div class="usp-grid">
+                    <div class="usp-card">
+                        <i class="fas fa-medal" aria-hidden="true"></i>
+                        <h3>Quality Guaranteed</h3>
+                        <p>Every product is tried, tested and approved by our in-house experts.</p>
+                    </div>
+                    <div class="usp-card">
+                        <i class="fas fa-paw" aria-hidden="true"></i>
+                        <h3>Expert Advice</h3>
+                        <p>Need guidance? Our pet care specialists are on hand 7 days a week.</p>
+                    </div>
+                    <div class="usp-card">
+                        <i class="fas fa-truck" aria-hidden="true"></i>
+                        <h3>Fast Delivery</h3>
+                        <p>Express dispatch and free next day delivery when you spend £59.</p>
+                    </div>
+                    <div class="usp-card">
+                        <i class="fas fa-sync" aria-hidden="true"></i>
+                        <h3>Easy Subscriptions</h3>
+                        <p>Flexible repeat orders with reminders so you never run out.</p>
+                    </div>
+                </div>
+                <p class="brand-story">Family-run since 1968, Tiny Tails brings together ethical sourcing, independent advice and heartfelt service.</p>
+            </div>
+        </section>
+
+        <section id="shop-all-products">
+            <div class="container">
+                <h2>Shop All Products</h2>
+                <div id="cat-food" class="category-group">
+                    <h3>Food</h3>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/gourmet-meal.svg" alt="Grain-free dog food" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Highland Feast Recipe</h3>
+                                <p>Rich in Scottish salmon with sweet potato for balanced energy.</p>
+                                <div class="product-price">From £17.50</div>
+                                <a href="#" class="btn black-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/daily-vitamins.svg" alt="Country Kitchen stew dog food pouches" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Country Kitchen Stew</h3>
+                                <p>Hearty slow-cooked meal with chicken, carrots and brown rice.</p>
+                                <div class="product-price">£14.99 <small>6 x 390g</small></div>
+                                <a href="#" class="btn pink-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/gentle-shampoo.svg" alt="RawBoost freeze-dried dog nuggets" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>RawBoost Nuggets</h3>
+                                <p>Freeze-dried raw toppers to boost protein and flavour at mealtimes.</p>
+                                <div class="product-price">£11.95</div>
+                                <a href="#" class="btn black-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div id="cat-treats" class="category-group">
+                    <h3>Treats</h3>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/crunchy-biscuits.svg" alt="Crunchy biscuits" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Country Bakery Biscuits</h3>
+                                <p>Oven-baked biscuits with apple, cinnamon and flaxseed.</p>
+                                <div class="product-price">£5.80</div>
+                                <a href="#" class="btn pink-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/training-treats.svg" alt="Training treats" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Liver Training Stars</h3>
+                                <p>Tiny soft stars perfect for classes and recall practice.</p>
+                                <div class="product-price">£3.90</div>
+                                <a href="#" class="btn black-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/chew-toy.svg" alt="Air-dried chews" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Air-Dried Venison Strips</h3>
+                                <p>Single protein chews sourced from UK farms for sensitive dogs.</p>
+                                <div class="product-price">£6.95</div>
+                                <a href="#" class="btn pink-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div id="cat-toys" class="category-group">
+                    <h3>Toys</h3>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/chew-toy.svg" alt="Interactive chew toy" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Puzzle Treat Cube</h3>
+                                <p>Level up playtime with a wobble cube that dispenses treats as it rolls.</p>
+                                <div class="product-price">£15.99</div>
+                                <a href="#" class="btn black-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/travel-bag.svg" alt="Plush toy" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Plush Forest Fox</h3>
+                                <p>Super soft plush with double-stitched seams and squeakers.</p>
+                                <div class="product-price">£10.50</div>
+                                <a href="#" class="btn pink-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/luxury-lead.svg" alt="Tug toy" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Recycled Tug Ring</h3>
+                                <p>Eco-friendly rope ring for interactive play sessions.</p>
+                                <div class="product-price">£8.75</div>
+                                <a href="#" class="btn black-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div id="cat-beds" class="category-group">
+                    <h3>Beds</h3>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/snuggle-bed.svg" alt="Calming bed" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>CalmNest Donut Bed</h3>
+                                <p>Raised rim design to soothe anxious sleepers with ultra-soft faux fur.</p>
+                                <div class="product-price">£49.00</div>
+                                <a href="#" class="btn pink-btn">View Product</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/travel-bag.svg" alt="Travel bed" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Roll-Up Travel Mat</h3>
+                                <p>Water-resistant base with memory foam core for adventures away from home.</p>
+                                <div class="product-price">£36.00</div>
+                                <a href="#" class="btn black-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/gourmet-meal.svg" alt="Heated pad" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>SnugWarm Heated Pad</h3>
+                                <p>Low-voltage heating pad for chilly evenings and senior joints.</p>
+                                <div class="product-price">£44.95</div>
+                                <a href="#" class="btn pink-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div id="cat-collars" class="category-group">
+                    <h3>Collars &amp; Leads</h3>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/glow-collar.svg" alt="LED collar" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>NightBright LED Collar</h3>
+                                <p>USB rechargeable collar with reflective trim and three lighting modes.</p>
+                                <div class="product-price">£21.00</div>
+                                <a href="#" class="btn black-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/luxury-lead.svg" alt="Heritage lead" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Classic Leather Set</h3>
+                                <p>Matching collar and lead crafted from vegetable-tanned leather.</p>
+                                <div class="product-price">£45.00</div>
+                                <a href="#" class="btn pink-btn">View Product</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/dental-sticks.svg" alt="Harness" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>ComfortFit Harness</h3>
+                                <p>No-pull design with breathable mesh padding and reflective piping.</p>
+                                <div class="product-price">£28.99</div>
+                                <a href="#" class="btn black-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div id="cat-puppy" class="category-group">
+                    <h3>Puppy Essentials</h3>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/daily-vitamins.svg" alt="Puppy multivitamins" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Puppy Daily Drops</h3>
+                                <p>Omega-rich supplement to support healthy development.</p>
+                                <div class="product-price">£12.60</div>
+                                <a href="#" class="btn pink-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/chew-toy.svg" alt="Teething ring" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Cooling Teething Ring</h3>
+                                <p>Freezable rubber ring to soothe teething gums and encourage play.</p>
+                                <div class="product-price">£7.80</div>
+                                <a href="#" class="btn black-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/puppy-essentials.svg" alt="Puppy starter kit" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Welcome Home Kit</h3>
+                                <p>Starter bundle with bowl, blanket, puppy pads and training treats.</p>
+                                <div class="product-price">£34.99</div>
+                                <a href="#" class="btn pink-btn">View Product</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div id="cat-healthcare" class="category-group">
+                    <h3>Healthcare</h3>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/gentle-shampoo.svg" alt="Sensitive shampoo" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Hypoallergenic Shampoo</h3>
+                                <p>Calming oat milk and chamomile blend for delicate skin.</p>
+                                <div class="product-price">£9.20</div>
+                                <a href="#" class="btn black-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/dental-sticks.svg" alt="Joint chews" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>JointCare Soft Chews</h3>
+                                <p>Glucosamine, chondroitin and turmeric for active mobility.</p>
+                                <div class="product-price">£18.40</div>
+                                <a href="#" class="btn pink-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/calming-spray.svg" alt="Calming diffuser" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Serenity Home Diffuser</h3>
+                                <p>Pheromone-based diffuser to ease stress during fireworks and travel.</p>
+                                <div class="product-price">£24.99</div>
+                                <a href="#" class="btn black-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div id="cat-travel" class="category-group">
+                    <h3>Travel</h3>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/travel-bag.svg" alt="Travel kit" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Adventure Travel Kit</h3>
+                                <p>Organised carry bag with collapsible bowls and treat pouch.</p>
+                                <div class="product-price">£42.00</div>
+                                <a href="#" class="btn pink-btn">View Product</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/glow-collar.svg" alt="Seatbelt clip" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Travel Seatbelt Clip</h3>
+                                <p>Adjustable tether keeping dogs safe and secure in the car.</p>
+                                <div class="product-price">£12.20</div>
+                                <a href="#" class="btn black-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/daily-vitamins.svg" alt="Travel water bottle" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Hydrate &amp; Go Bottle</h3>
+                                <p>Leak-proof travel bottle with integrated drinking tray.</p>
+                                <div class="product-price">£14.99</div>
+                                <a href="#" class="btn pink-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <div id="cat-training" class="category-group">
+                    <h3>Training</h3>
+                    <div class="product-grid">
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/training-treats.svg" alt="Training treats" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Focus Bites</h3>
+                                <p>Soft poultry morsels ideal for clicker training sessions.</p>
+                                <div class="product-price">£4.60</div>
+                                <a href="#" class="btn black-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/chew-toy.svg" alt="Clicker" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>SoftTouch Clicker</h3>
+                                <p>Ergonomic clicker with wrist strap and dual sound levels.</p>
+                                <div class="product-price">£7.20</div>
+                                <a href="#" class="btn pink-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                        <article class="product-card">
+                            <div class="product-img">
+                                <img src="images/dog-supplies/products/luxury-lead.svg" alt="Long line lead" width="320" height="320" loading="lazy" decoding="async">
+                            </div>
+                            <div class="product-info">
+                                <h3>Recall Long Line</h3>
+                                <p>Lightweight 10m line for recall practice and safe exploring.</p>
+                                <div class="product-price">£19.95</div>
+                                <a href="#" class="btn black-btn">Add to Basket</a>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Us</h3>
+                    <p>Tiny Tails is your one-stop shop for all pet supplies and home-from-home care. We offer high-quality products and services for dogs, cats, and small pets.</p>
+                    <div class="social-links-footer">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#" data-page="home">Home</a></li>
+                        <li><a href="#" data-page="shop">Shop</a></li>
+                        <li><a href="#" data-page="services">Services</a></li>
+                        <li><a href="#" data-page="services">About Us</a></li>
+                        <li><a href="#" data-page="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Shipping Policy</a></li>
+                        <li><a href="#">Returns &amp; Refunds</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Terms &amp; Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info-footer">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Pet Street, Cheshire, UK</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>0800 123 4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@tinytails.co.uk</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2023 Tiny Tails Pet Supplies &amp; Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const routedLinks = document.querySelectorAll('.nav-link[data-page], .footer-links a[data-page]');
+            routedLinks.forEach(link => {
+                link.addEventListener('click', event => {
+                    const target = link.getAttribute('data-page');
+                    if (!target) {
+                        return;
+                    }
+                    event.preventDefault();
+                    window.location.href = `/index.html#${target}`;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

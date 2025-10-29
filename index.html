@@ -1248,7 +1248,8 @@
         <nav>
             <div class="container-xl nav-inner">
                 <ul class="nav-links">
-                    <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="/index.html" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="/dog-supplies.html" class="nav-link">Dog Supplies</a></li>
                     <li>
                         <a href="#" class="nav-link" data-page="shop">Shop <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown">
@@ -2147,14 +2148,14 @@
             // Add click event listeners to all navigation links
             navLinks.forEach(link => {
                 link.addEventListener('click', function(e) {
-                    e.preventDefault();
-
                     // Get the target page from data attribute
                     const targetPage = this.getAttribute('data-page');
 
                     if (!targetPage) {
                         return;
                     }
+
+                    e.preventDefault();
                     
                     // Hide all pages
                     document.querySelectorAll('.page').forEach(page => {
