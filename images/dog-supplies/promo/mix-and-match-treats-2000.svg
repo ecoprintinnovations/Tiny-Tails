@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1200" viewBox="0 0 2000 1200" role="img" aria-hidden="true">
+    <defs>
+        <linearGradient id="grad-mix-and-match-treats" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#fff3d8" />
+            <stop offset="100%" stop-color="#ffd79c" />
+        </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grad-mix-and-match-treats)" rx="48" />
+    <g><circle cx="615.0" cy="600" r="130.0" fill="#fff1cc" stroke="#d48f3a" stroke-width="28"/><circle cx="1385.0" cy="600" r="130.0" fill="#fff1cc" stroke="#d48f3a" stroke-width="28"/><rect x="615.0" y="535.0" width="770.0" height="130.0" rx="65.0" ry="65.0" fill="#fff1cc" stroke="#d48f3a" stroke-width="28"/></g><g><circle cx="750.0" cy="480" r="100.0" fill="#ffe8b0" stroke="#d48f3a" stroke-width="20"/><circle cx="1250.0" cy="480" r="100.0" fill="#ffe8b0" stroke="#d48f3a" stroke-width="20"/><rect x="750.0" y="430.0" width="500.0" height="100.0" rx="50.0" ry="50.0" fill="#ffe8b0" stroke="#d48f3a" stroke-width="20"/></g><g><circle cx="412.0" cy="628.0" r="54.0" fill="#ffd79c" stroke="None" stroke-width="0"/><circle cx="484.0" cy="604.0" r="54.0" fill="#ffd79c" stroke="None" stroke-width="0"/><circle cx="556.0" cy="604.0" r="54.0" fill="#ffd79c" stroke="None" stroke-width="0"/><circle cx="628.0" cy="628.0" r="54.0" fill="#ffd79c" stroke="None" stroke-width="0"/><circle cx="520" cy="760" r="120" fill="#ffd79c" stroke="None" stroke-width="0"/></g><g><circle cx="1390.0" cy="310.0" r="45.0" fill="#ffd79c" stroke="None" stroke-width="0"/><circle cx="1450.0" cy="290.0" r="45.0" fill="#ffd79c" stroke="None" stroke-width="0"/><circle cx="1510.0" cy="290.0" r="45.0" fill="#ffd79c" stroke="None" stroke-width="0"/><circle cx="1570.0" cy="310.0" r="45.0" fill="#ffd79c" stroke="None" stroke-width="0"/><circle cx="1480" cy="420" r="100" fill="#ffd79c" stroke="None" stroke-width="0"/></g>
+</svg>

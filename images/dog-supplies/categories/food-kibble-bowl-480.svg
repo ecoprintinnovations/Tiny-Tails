@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 1200 900" role="img" aria-hidden="true">
+    <defs>
+        <linearGradient id="grad-food-kibble-bowl" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#f8d8b0" />
+            <stop offset="100%" stop-color="#f1a889" />
+        </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grad-food-kibble-bowl)" rx="36" />
+    <ellipse cx="500" cy="550" rx="360" ry="140" fill="#fef6ed" stroke="#c46b3a" stroke-width="18"/><ellipse cx="500" cy="470" rx="300" ry="90" fill="#f7e1c5" stroke="#c46b3a" stroke-width="12"/><circle cx="449.6" cy="470.0" r="28" fill="#c47930"/><circle cx="483.2" cy="470.0" r="28" fill="#c47930"/><circle cx="516.8" cy="470.0" r="28" fill="#c47930"/><circle cx="550.4" cy="470.0" r="28" fill="#c47930"/><circle cx="449.6" cy="506.4" r="28" fill="#c47930"/><circle cx="483.2" cy="506.4" r="28" fill="#c47930"/><circle cx="516.8" cy="506.4" r="28" fill="#c47930"/><circle cx="550.4" cy="506.4" r="28" fill="#c47930"/>
+</svg>
