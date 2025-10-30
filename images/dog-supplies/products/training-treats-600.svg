@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="600" viewBox="0 0 900 900" role="img" aria-hidden="true">
+    <defs>
+        <linearGradient id="grad-training-treats" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#ffffff" />
+            <stop offset="100%" stop-color="#f4f4f4" />
+        </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grad-training-treats)" rx="36" />
+    <rect x="320" y="320" width="260" height="360" rx="60" ry="60" fill="#ffe3ef" stroke="#d96a99" stroke-width="16"/><g><circle cx="396.0" cy="454.0" r="27.0" fill="#f7c5dd" stroke="None" stroke-width="0"/><circle cx="432.0" cy="442.0" r="27.0" fill="#f7c5dd" stroke="None" stroke-width="0"/><circle cx="468.0" cy="442.0" r="27.0" fill="#f7c5dd" stroke="None" stroke-width="0"/><circle cx="504.0" cy="454.0" r="27.0" fill="#f7c5dd" stroke="None" stroke-width="0"/><circle cx="450" cy="520" r="60" fill="#f7c5dd" stroke="None" stroke-width="0"/></g><circle cx="414.0" cy="640.0" r="20" fill="#d96a99"/><circle cx="438.0" cy="640.0" r="20" fill="#d96a99"/><circle cx="462.0" cy="640.0" r="20" fill="#d96a99"/><circle cx="486.0" cy="640.0" r="20" fill="#d96a99"/><circle cx="414.0" cy="666.0" r="20" fill="#d96a99"/><circle cx="438.0" cy="666.0" r="20" fill="#d96a99"/>
+</svg>

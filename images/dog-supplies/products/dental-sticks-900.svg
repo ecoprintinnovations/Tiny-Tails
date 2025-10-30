@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-hidden="true">
+    <defs>
+        <linearGradient id="grad-dental-sticks" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="#ffffff" />
+            <stop offset="100%" stop-color="#f4f4f4" />
+        </linearGradient>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#grad-dental-sticks)" rx="36" />
+    <rect x="300" y="360" width="50" height="320" rx="24" ry="24" fill="#d0e4c2" stroke="#739b59" stroke-width="10"/><rect x="360" y="360" width="50" height="320" rx="24" ry="24" fill="#d0e4c2" stroke="#739b59" stroke-width="10"/><rect x="420" y="360" width="50" height="320" rx="24" ry="24" fill="#d0e4c2" stroke="#739b59" stroke-width="10"/><rect x="480" y="360" width="50" height="320" rx="24" ry="24" fill="#d0e4c2" stroke="#739b59" stroke-width="10"/>
+</svg>
