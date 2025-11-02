@@ -144,6 +144,10 @@
         .top-bar {
             background-color: var(--black);
             color: var(--white);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
             font-size: 0.9rem;
         }
 
@@ -151,7 +155,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 10px 0;
+            width: 100%;
+            margin: 0;
         }
 
         header {
@@ -168,6 +173,12 @@
             gap: 24px;
             align-items: center;
             padding: 16px 40px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .header-left {
+            justify-self: start;
         }
 
         .site-logo {
@@ -176,8 +187,15 @@
         }
 
         .header-centre {
+            justify-self: center;
             max-width: 900px;
             width: 100%;
+        }
+
+        .header-centre input[type="text"],
+        .header-centre .search-bar {
+            width: 100%;
+            max-width: 100%;
         }
 
         .search-bar {
@@ -213,6 +231,7 @@
         }
 
         .header-right {
+            justify-self: end;
             display: flex;
             gap: 20px;
             align-items: center;
@@ -246,6 +265,11 @@
 
         nav {
             background-color: var(--black);
+            padding: 0 40px;
+        }
+
+        nav .nav-inner {
+            max-width: none;
         }
 
         .nav-inner {
@@ -948,9 +972,7 @@
     <header>
         <div class="site-header">
             <div class="header-left">
-                <a href="https://ecoprintinnovations.github.io/Tiny-Tails/">
-                    <img src="https://ecoprintinnovations.github.io/Tiny-Tails/images/TinyTailsLogoCroped.jpg" alt="Tiny Tails Pet Services Logo" class="site-logo" width="160" height="auto" loading="lazy" decoding="async" fetchpriority="high" onerror="this.onerror=null;this.src='images/TinyTailsLogoCroped.jpg';" />
-                </a>
+                <img src="images/TinyTailsLogoCroped.jpg" alt="Tiny Tails Logo" class="site-logo">
             </div>
             <div class="header-centre">
                 <div class="search-bar">
