@@ -314,32 +314,6 @@
             background-color: var(--white);
         }
 
-        .breadcrumb {
-            background: var(--light-gray);
-            padding: 16px 0;
-        }
-
-        .breadcrumb nav {
-            background: none;
-        }
-
-        .breadcrumb ol {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            font-size: 0.95rem;
-        }
-
-        .breadcrumb li {
-            color: var(--gray);
-        }
-
-        .breadcrumb li+li::before {
-            content: '\203A';
-            margin-right: 8px;
-            color: var(--gray);
-        }
-
         .hero {
             position: relative;
             color: var(--white);
@@ -370,7 +344,7 @@
         }
 
         .dog-hero {
-            background: linear-gradient(rgba(26, 26, 26, 0.45), rgba(26, 26, 26, 0.45)), url('images/dog-supplies/hero/dog-supplies-hero.svg') center/cover;
+            background: url('images/banners/dogsuppliesbanner.png') center center / cover no-repeat;
         }
 
         .cta-group {
@@ -974,7 +948,9 @@
     <header>
         <div class="site-header">
             <div class="header-left">
-                <img src="/images/TinyTailsLogoCroped.jpg" alt="Tiny Tails Logo" class="site-logo" width="913" height="497" loading="lazy" decoding="async">
+                <a href="https://ecoprintinnovations.github.io/Tiny-Tails/">
+                    <img src="images/TinyTailsLogoCropped.jpg" alt="Tiny Tails Pet Services Logo" class="site-logo" width="160" height="auto" loading="lazy" decoding="async" />
+                </a>
             </div>
             <div class="header-centre">
                 <div class="search-bar">
@@ -1017,16 +993,7 @@
     </header>
 
     <main>
-        <div class="breadcrumb">
-            <div class="container">
-                <ol>
-                    <li><a href="index.html">Home</a></li>
-                    <li>Dog Supplies</li>
-                </ol>
-            </div>
-        </div>
-
-        <section class="hero dog-hero">
+        <section class="hero dog-hero" style="background: url('images/banners/dogsuppliesbanner.png') center center / cover no-repeat;">
             <div class="container">
                 <h1>Dog Supplies</h1>
                 <p>Everything your dog needs in one place.</p>
