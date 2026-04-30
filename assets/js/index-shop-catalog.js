@@ -52,11 +52,27 @@
       return product.shop_group === activeGroupName();
     };
 
+    const searchMatches = (product) => {
+      const searchTerm = normalise(searchInput && searchInput.value);
+      if (!searchTerm) return true;
+
+      const haystack = normalise([
+        product.title,
+        product.vendor,
+        product.type,
+        product.description,
+        product.tags && product.tags.join(' '),
+        product.variants && product.variants.map((variant) => `${variant.title} ${variant.sku}`).join(' '),
+      ].join(' '));
+
+      return haystack.includes(searchTerm);
+    };
+
     const rebuildTypeFilter = (preferredType = '') => {
       if (!typeFilter) return;
 
       const currentType = preferredType || typeFilter.value;
-      const groupProducts = products.filter(groupMatches);
+      const groupProducts = products.filter((product) => groupMatches(product) && searchMatches(product));
       const types = [...new Set(groupProducts.map((product) => product.type).filter(Boolean))].sort();
 
       typeFilter.replaceChildren();
@@ -76,22 +92,10 @@
     };
 
     const productMatches = (product) => {
-      const searchTerm = normalise(searchInput && searchInput.value);
       const typeTerm = typeFilter ? typeFilter.value : '';
       if (typeTerm && product.type !== typeTerm) return false;
       if (!groupMatches(product)) return false;
-      if (!searchTerm) return true;
-
-      const haystack = normalise([
-        product.title,
-        product.vendor,
-        product.type,
-        product.description,
-        product.tags && product.tags.join(' '),
-        product.variants && product.variants.map((variant) => `${variant.title} ${variant.sku}`).join(' '),
-      ].join(' '));
-
-      return haystack.includes(searchTerm);
+      return searchMatches(product);
     };
 
     const renderProduct = (product, index) => {
@@ -198,7 +202,12 @@
 
       rebuildTypeFilter(pendingType);
 
-      if (searchInput) searchInput.addEventListener('input', render);
+      if (searchInput) {
+        searchInput.addEventListener('input', () => {
+          rebuildTypeFilter();
+          render();
+        });
+      }
       if (searchInput) {
         searchInput.addEventListener('keydown', (event) => {
           if (event.key !== 'Enter') return;
@@ -221,7 +230,7 @@
       }
       if (typeFilter) typeFilter.addEventListener('change', render);
 
-      document.querySelectorAll('[data-catalog-group]').forEach((link) => {
+      document.querySelectorAll('[data-catalog-group], [data-catalog-search]').forEach((link) => {
         link.addEventListener('click', (event) => {
           event.preventDefault();
           activeGroup = link.dataset.catalogGroup || '';
