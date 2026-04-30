@@ -1264,9 +1264,33 @@
         }
         
         @media (max-width: 768px) {
+            header {
+                position: static;
+            }
+
+            nav {
+                padding: 0 12px;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            nav .nav-inner {
+                justify-content: flex-start;
+                padding: 0;
+            }
+
             .nav-links {
-                flex-direction: column;
-                width: 100%;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                min-width: max-content;
+                width: auto;
+            }
+
+            .nav-links a {
+                padding: 13px 14px;
+                font-size: 0.78rem;
+                white-space: nowrap;
             }
             
             .hero h2 {
@@ -1307,7 +1331,7 @@
             }
 
             .site-logo {
-                height: 135px;
+                height: 105px;
                 width: auto;
                 position: relative;
                 left: 0;
