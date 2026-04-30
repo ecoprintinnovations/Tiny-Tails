@@ -3,4 +3,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://SITE_URL_TODO/sitemap.xml
+Sitemap: https://ecoprintinnovations.github.io/Tiny-Tails/sitemap.xml

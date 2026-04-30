@@ -1,5 +1,13 @@
 :root {
   color-scheme: light;
+  --tt-primary: #ffb6c1;
+  --tt-primary-deep: #f590a8;
+  --tt-secondary: #333333;
+  --tt-ink: #2f0d15;
+  --tt-muted: #5f5f66;
+  --tt-cream: #fff8fa;
+  --tt-border: #f5d5dd;
+  --tt-shadow: 0 10px 30px rgba(47, 13, 21, 0.07);
 }
 
 html {
@@ -9,6 +17,15 @@ html {
 body {
   background-color: #ffffff;
   color: #333333;
+  font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+.logo {
+  font-family: "Comfortaa", cursive;
 }
 
 a,
@@ -165,7 +182,7 @@ textarea:focus-visible {
   background-color: #ffffff;
   border-radius: 0.75rem;
   padding: 1.5rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  box-shadow: var(--tt-shadow);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -195,6 +212,148 @@ textarea:focus-visible {
 .form-input:focus-visible {
   border-color: #f590a8;
   box-shadow: 0 0 0 3px rgba(245, 144, 168, 0.35);
+}
+
+.shop-hero {
+  background:
+    radial-gradient(circle at 14% 12%, rgba(255, 182, 193, 0.42), transparent 34rem),
+    linear-gradient(180deg, #fff8fa 0%, #ffffff 100%);
+  position: relative;
+}
+
+.shop-kicker {
+  color: #7a4450;
+  font-family: "Comfortaa", cursive;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  margin-bottom: 0.9rem;
+  text-transform: uppercase;
+}
+
+.shop-intro-panel {
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(255, 182, 193, 0.5);
+  border-radius: 1.25rem;
+  box-shadow: var(--tt-shadow);
+  padding: clamp(1.25rem, 2vw, 2rem);
+}
+
+.shop-stat-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.shop-stat-pill {
+  background: #ffffff;
+  border: 1px solid var(--tt-border);
+  border-radius: 9999px;
+  color: var(--tt-ink);
+  font-weight: 800;
+  padding: 0.55rem 0.9rem;
+}
+
+.shop-toolbar {
+  background: #ffffff;
+  border: 1px solid var(--tt-border);
+  border-radius: 1.25rem;
+  box-shadow: var(--tt-shadow);
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(12rem, 1fr);
+  gap: 1rem;
+  margin: 2rem 0 1rem;
+  padding: 1rem;
+}
+
+.shop-filter span {
+  display: block;
+  color: var(--tt-ink);
+  font-family: "Comfortaa", cursive;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.shop-count {
+  color: var(--tt-muted);
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.shop-product-card {
+  border: 1px solid rgba(245, 213, 221, 0.85);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.shop-product-image {
+  aspect-ratio: 1 / 1;
+  background: var(--tt-cream);
+  border: 1px solid rgba(245, 213, 221, 0.7);
+  border-radius: 0.85rem;
+  box-shadow: none;
+  height: auto;
+  margin-bottom: 1rem;
+  object-fit: cover;
+  width: 100%;
+}
+
+.shop-product-meta {
+  align-self: flex-start;
+  background: #fff0f4;
+  border-radius: 9999px;
+  color: #7a4450;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.65rem;
+  text-transform: uppercase;
+}
+
+.shop-product-card h2 {
+  color: var(--tt-secondary);
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.shop-product-description {
+  color: var(--tt-muted);
+  display: -webkit-box;
+  font-size: 0.96rem;
+  line-clamp: 4;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.shop-product-price {
+  color: var(--tt-ink);
+  font-family: "Comfortaa", cursive;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: auto 0 1rem;
+}
+
+.shop-variant-actions {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.shop-buy-button {
+  box-shadow: 0 8px 16px rgba(245, 144, 168, 0.2);
+  font-size: 0.88rem;
+  padding-inline: 1rem;
+}
+
+.shop-buy-button:hover,
+.shop-buy-button:focus-visible {
+  transform: translateY(-1px);
 }
 
 .table-auto th,
@@ -236,6 +395,12 @@ footer a:focus-visible {
 
   main {
     padding: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .shop-toolbar {
+    grid-template-columns: 1fr;
   }
 }
 

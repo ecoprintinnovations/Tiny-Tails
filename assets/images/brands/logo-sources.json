@@ -1,0 +1,66 @@
+[
+  {
+    "brand": "KIWI Walker",
+    "file": "kiwi-walker.png",
+    "url": "https://www.kiwiwalker.com/wp-content/uploads/elementor/thumbs/cropped-Novy%CC%81-projekt2-p8gttnreq97k732ci3yrzzb0wmliyf6y814rkakysg.png",
+    "source_page": "https://www.kiwiwalker.com/",
+    "local_path": "assets/images/brands/kiwi-walker.png",
+    "bytes": 12447
+  },
+  {
+    "brand": "DOOG",
+    "file": "doog.avif",
+    "url": "https://www.doogusa.com/cdn/shop/files/DOOG3x.avif?v=1755801329&width=360",
+    "source_page": "https://www.doogusa.com/",
+    "local_path": "assets/images/brands/doog.avif",
+    "bytes": 16379
+  },
+  {
+    "brand": "Disney Pets",
+    "file": "disney.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/4/44/The_Walt_Disney_Company_Logo.svg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:The_Walt_Disney_Company_Logo.svg",
+    "local_path": "assets/images/brands/disney.svg",
+    "bytes": 25537
+  },
+  {
+    "brand": "Marvel",
+    "file": "marvel.svg",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Marvel_Logo.svg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Marvel_Logo.svg",
+    "local_path": "assets/images/brands/marvel.svg",
+    "bytes": 1687
+  },
+  {
+    "brand": "Ancol",
+    "file": "ancol.png",
+    "url": "https://www.ancol.co.uk/images/logo-new.png",
+    "source_page": "https://www.ancol.co.uk/",
+    "local_path": "assets/images/brands/ancol.png",
+    "bytes": 6050
+  },
+  {
+    "brand": "IAMS",
+    "file": "iams.svg",
+    "url": "https://iams.eu/_assets/1e37e4b7771dbb766d34c2b78f0d177a/images/svg/logo.svg",
+    "source_page": "https://iams.eu/en-gb/cat",
+    "local_path": "assets/images/brands/iams.svg",
+    "bytes": 5337
+  },
+  {
+    "brand": "GO-CAT",
+    "file": "go-cat.png",
+    "url": "https://www.purina.co.uk/sites/default/files/migrate_default_content_files/brand-go-gat.png",
+    "source_page": "https://www.purina.co.uk/cat/cat-food/go-cat",
+    "local_path": "assets/images/brands/go-cat.png",
+    "bytes": 17076
+  },
+  {
+    "brand": "Danish Design",
+    "file": "danish-design.png",
+    "url": "https://www.danishdesign.co.uk/wp-content/uploads/2025/09/danish-design-primary-white-400.png",
+    "source_page": "https://www.danishdesign.co.uk/",
+    "local_path": "assets/images/brands/danish-design.png",
+    "bytes": 7572
+  }
+]

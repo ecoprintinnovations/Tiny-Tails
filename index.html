@@ -519,6 +519,59 @@
             margin-bottom: 15px;
             font-size: 0.9rem;
         }
+
+        .catalog-tools {
+            align-items: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: space-between;
+            margin: 45px 0 20px;
+        }
+
+        .catalog-count {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .catalog-filter {
+            border: 1px solid #eee;
+            border-radius: 30px;
+            color: var(--black);
+            font-family: 'Poppins', sans-serif;
+            padding: 10px 18px;
+        }
+
+        .product-info p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            margin-bottom: 14px;
+        }
+
+        .variant-buttons {
+            display: grid;
+            gap: 10px;
+        }
+
+        .variant-buttons .btn {
+            padding: 10px 18px;
+            width: 100%;
+        }
+
+        .featured-product-grid .product-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .featured-product-grid .product-info {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+        }
+
+        .featured-product-grid .product-info .btn {
+            margin-top: auto;
+        }
         
         /* Services Section */
         .services {
@@ -735,36 +788,87 @@
         
         .brands-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 24px;
             align-items: center;
         }
         
         .brand-logo {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100px;
-            background-color: var(--white);
-            border-radius: 8px;
+            min-height: 150px;
+            background: linear-gradient(145deg, var(--white), #fff6fa);
+            border: 1px solid #ffe6ef;
+            border-radius: 18px;
             box-shadow: var(--shadow);
-            padding: 20px;
+            padding: 24px;
+            text-align: center;
             transition: var(--transition);
+        }
+
+        .brand-logo-dark {
+            background: linear-gradient(145deg, #163126, #274737);
+            border-color: #274737;
+        }
+
+        .brand-logo.brand-logo-dark h3,
+        .brand-logo.brand-logo-dark p {
+            color: var(--white);
+        }
+
+        .brand-logo.brand-logo-dark span {
+            background-color: var(--white);
+            color: #274737;
         }
         
         .brand-logo:hover {
             transform: translateY(-5px);
+            box-shadow: 0 14px 28px rgba(255, 182, 209, 0.26);
         }
-        
+
+        .brand-logo h3 {
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
         .brand-logo img {
-            max-width: 100%;
-            max-height: 60px;
-            filter: grayscale(100%);
-            transition: var(--transition);
+            height: 54px;
+            margin-bottom: 18px;
+            max-width: 165px;
+            object-fit: contain;
+            width: 100%;
         }
-        
-        .brand-logo:hover img {
-            filter: grayscale(0%);
+
+        .brand-logo p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 14px;
+        }
+
+        .brand-logo span {
+            background-color: var(--dark-pink);
+            border-radius: 999px;
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            padding: 7px 12px;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 992px) {
+            .brands-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 576px) {
+            .brands-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         /* Blog Section */
@@ -1252,10 +1356,10 @@
                     <li>
                         <a href="#" class="nav-link" data-page="shop">Shop <i class="fas fa-chevron-down"></i></a>
                         <div class="dropdown">
-                            <a href="dog-supplies.html" class="nav-link">Dog Supplies</a>
-                            <a href="#" class="nav-link" data-page="cat-supplies">Cat Supplies</a>
-                            <a href="#" class="nav-link" data-page="small-pets">Small Pets</a>
-                            <a href="#" class="nav-link" data-page="birds-reptiles">Birds &amp; Reptiles</a>
+                            <a href="#shop-all-products" class="nav-link" data-catalog-group="dog">Dog Supplies</a>
+                            <a href="#" class="nav-link" data-catalog-group="cat">Cat Supplies</a>
+                            <a href="#" class="nav-link" data-catalog-group="small">Small Pets</a>
+                            <a href="#" class="nav-link" data-catalog-group="birds">Birds &amp; Reptiles</a>
                         </div>
                     </li>
                     <li><a href="#" class="nav-link" data-page="services">Services</a></li>
@@ -1295,7 +1399,7 @@
                         </div>
                         <div class="category-info">
                             <h3>Dog Supplies</h3>
-                            <a href="#shop-all-products" class="btn btn-outline" data-page="dog-supplies">Shop Now</a>
+                            <a href="#shop-all-products" class="btn btn-outline" data-catalog-group="dog">Shop Now</a>
                         </div>
                     </div>
                     <div class="category-card">
@@ -1304,7 +1408,7 @@
                         </div>
                         <div class="category-info">
                             <h3>Cat Supplies</h3>
-                            <a href="#shop-all-products" class="btn btn-outline" data-page="cat-supplies">Shop Now</a>
+                            <a href="#shop-all-products" class="btn btn-outline" data-catalog-group="cat">Shop Now</a>
                         </div>
                     </div>
                     <div class="category-card">
@@ -1313,7 +1417,7 @@
                         </div>
                         <div class="category-info">
                             <h3>Small Pets</h3>
-                            <a href="#shop-all-products" class="btn btn-outline" data-page="small-pets">Shop Now</a>
+                            <a href="#shop-all-products" class="btn btn-outline" data-catalog-group="small">Shop Now</a>
                         </div>
                     </div>
                     <div class="category-card">
@@ -1322,7 +1426,7 @@
                         </div>
                         <div class="category-info">
                             <h3>Birds &amp; Reptiles</h3>
-                            <a href="#shop-all-products" class="btn btn-outline" data-page="birds-reptiles">Shop Now</a>
+                            <a href="#shop-all-products" class="btn btn-outline" data-catalog-group="birds">Shop Now</a>
                         </div>
                     </div>
                 </div>
@@ -1336,85 +1440,11 @@
                     <h2>Featured Products</h2>
                     <p>Check out our most popular items</p>
                 </div>
-                <div class="product-grid">
+                <div class="product-grid featured-product-grid" id="featured-product-grid" data-catalog-url="assets/data/payhip-catalog.json">
                     <div class="product-card">
-                        <div class="product-img">
-                            <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Premium Dog Food">
-                            <span class="product-badge">Bestseller</span>
-                        </div>
                         <div class="product-info">
-                            <h3>Premium Dog Food - Chicken &amp; Rice</h3>
-                            <div class="product-price">
-                                <span class="current-price">£24.99</span>
-                                <span class="original-price">£29.99</span>
-                            </div>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                            </div>
-                            <a href="#" class="btn btn-pink">Add to Cart</a>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="https://images.unsplash.com/photo-1591946614720-90a587da4a36?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Cat Scratching Post">
-                        </div>
-                        <div class="product-info">
-                            <h3>Deluxe Cat Scratching Post</h3>
-                            <div class="product-price">
-                                <span class="current-price">£39.99</span>
-                            </div>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <a href="#" class="btn btn-pink">Add to Cart</a>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="https://images.unsplash.com/photo-1576669801945-bf4c1a96f6e3?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Small Pet Cage">
-                            <span class="product-badge">New</span>
-                        </div>
-                        <div class="product-info">
-                            <h3>Small Pet Habitat with Accessories</h3>
-                            <div class="product-price">
-                                <span class="current-price">£59.99</span>
-                            </div>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <a href="#" class="btn btn-pink">Add to Cart</a>
-                        </div>
-                    </div>
-                    <div class="product-card">
-                        <div class="product-img">
-                            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Interactive Dog Toy">
-                        </div>
-                        <div class="product-info">
-                            <h3>Interactive Puzzle Dog Toy</h3>
-                            <div class="product-price">
-                                <span class="current-price">£14.99</span>
-                                <span class="original-price">£19.99</span>
-                            </div>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star-half-alt"></i>
-                                <i class="far fa-star"></i>
-                            </div>
-                            <a href="#" class="btn btn-pink">Add to Cart</a>
+                            <h3>Loading featured products...</h3>
+                            <p>Finding our best high-value picks.</p>
                         </div>
                     </div>
                 </div>
@@ -1502,7 +1532,7 @@
                     </div>
                     <div class="category-info">
                         <h3>Dog Supplies</h3>
-                        <a href="#shop-all-products" class="btn btn-outline" data-page="dog-supplies">Shop Now</a>
+                        <a href="#shop-all-products" class="btn btn-outline" data-catalog-group="dog">Shop Now</a>
                     </div>
                 </div>
                 <div class="category-card">
@@ -1511,7 +1541,7 @@
                     </div>
                     <div class="category-info">
                         <h3>Cat Supplies</h3>
-                        <a href="#shop-all-products" class="btn btn-outline" data-page="cat-supplies">Shop Now</a>
+                        <a href="#shop-all-products" class="btn btn-outline" data-catalog-group="cat">Shop Now</a>
                     </div>
                 </div>
                 <div class="category-card">
@@ -1520,7 +1550,7 @@
                     </div>
                     <div class="category-info">
                         <h3>Small Pets</h3>
-                        <a href="#shop-all-products" class="btn btn-outline" data-page="small-pets">Shop Now</a>
+                        <a href="#shop-all-products" class="btn btn-outline" data-catalog-group="small">Shop Now</a>
                     </div>
                 </div>
                 <div class="category-card">
@@ -1529,36 +1559,25 @@
                     </div>
                     <div class="category-info">
                         <h3>Birds &amp; Reptiles</h3>
-                        <a href="#shop-all-products" class="btn btn-outline" data-page="birds-reptiles">Shop Now</a>
+                        <a href="#shop-all-products" class="btn btn-outline" data-catalog-group="birds">Shop Now</a>
                     </div>
                 </div>
             </div>
             
-            <div class="product-grid" style="margin-top: 50px;">
-                <!-- Repeat product cards from home page -->
+            <div class="catalog-tools">
+                <p class="catalog-count" id="catalog-count" aria-live="polite">Loading products...</p>
+                <select class="catalog-filter" id="catalog-filter" aria-label="Filter products by type">
+                    <option value="">All product types</option>
+                </select>
+            </div>
+
+            <div class="product-grid" id="payhip-home-product-grid" data-catalog-url="assets/data/payhip-catalog.json">
                 <div class="product-card">
-                    <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Premium Dog Food">
-                        <span class="product-badge">Bestseller</span>
-                    </div>
                     <div class="product-info">
-                        <h3>Premium Dog Food - Chicken &amp; Rice</h3>
-                        <div class="product-price">
-                            <span class="current-price">£24.99</span>
-                            <span class="original-price">£29.99</span>
-                        </div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                        <a href="#" class="btn btn-pink">Add to Cart</a>
+                        <h3>Loading Tiny Tails products...</h3>
+                        <p>Fetching the latest local catalogue.</p>
                     </div>
                 </div>
-                
-                <!-- Additional products can be added here -->
             </div>
         </section>
     </section>
@@ -1756,30 +1775,13 @@
                 <p>Check out our latest products</p>
             </div>
             
-            <div class="product-grid">
-                <!-- New arrival products would go here -->
+            <div class="product-grid featured-product-grid" id="new-arrivals-grid" data-catalog-url="assets/data/payhip-catalog.json">
                 <div class="product-card">
-                    <div class="product-img">
-                        <img src="https://images.unsplash.com/photo-1576669801945-bf4c1a96f6e3?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=600&amp;q=80" alt="Small Pet Cage">
-                        <span class="product-badge">New</span>
-                    </div>
                     <div class="product-info">
-                        <h3>Small Pet Habitat with Accessories</h3>
-                        <div class="product-price">
-                            <span class="current-price">£59.99</span>
-                        </div>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <a href="#" class="btn btn-pink">Add to Cart</a>
+                        <h3>Loading new arrivals...</h3>
+                        <p>Finding practical everyday picks.</p>
                     </div>
                 </div>
-                
-                <!-- Additional new arrival products -->
             </div>
         </div>
     </section>
@@ -1832,28 +1834,58 @@
         <div class="container">
             <div class="section-title">
                 <h2>Our Brands</h2>
-                <p>We stock only the highest quality brands for your pets</p>
+                <p>Top dog and cat names from the Tiny Tails catalogue</p>
             </div>
             
             <div class="brands-grid">
-                <div class="brand-logo">
-                    <img src="https://via.placeholder.com/150x80/ffb6d1/ffffff?text=Brand+1" alt="Brand 1">
-                </div>
-                <div class="brand-logo">
-                    <img src="https://via.placeholder.com/150x80/ffb6d1/ffffff?text=Brand+2" alt="Brand 2">
-                </div>
-                <div class="brand-logo">
-                    <img src="https://via.placeholder.com/150x80/ffb6d1/ffffff?text=Brand+3" alt="Brand 3">
-                </div>
-                <div class="brand-logo">
-                    <img src="https://via.placeholder.com/150x80/ffb6d1/ffffff?text=Brand+4" alt="Brand 4">
-                </div>
-                <div class="brand-logo">
-                    <img src="https://via.placeholder.com/150x80/ffb6d1/ffffff?text=Brand+5" alt="Brand 5">
-                </div>
-                <div class="brand-logo">
-                    <img src="https://via.placeholder.com/150x80/ffb6d1/ffffff?text=Brand+6" alt="Brand 6">
-                </div>
+                <a href="#shop-all-products" class="brand-logo" data-catalog-group="dog" data-catalog-search="KIWI Walker">
+                    <img src="assets/images/brands/kiwi-walker.png" alt="KIWI Walker logo" loading="lazy" decoding="async">
+                    <h3>KIWI Walker</h3>
+                    <p>Walkies, bowls and dog travel essentials.</p>
+                    <span>Dog Brand</span>
+                </a>
+                <a href="#shop-all-products" class="brand-logo" data-catalog-group="dog" data-catalog-search="DOOG">
+                    <img src="assets/images/brands/doog.avif" alt="DOOG logo" loading="lazy" decoding="async">
+                    <h3>DOOG</h3>
+                    <p>Harnesses, leads, walkie bags and fetch toys.</p>
+                    <span>Dog Brand</span>
+                </a>
+                <a href="#shop-all-products" class="brand-logo" data-catalog-group="dog" data-catalog-search="Disney">
+                    <img src="assets/images/brands/disney.svg" alt="Disney logo" loading="lazy" decoding="async">
+                    <h3>Disney Pets</h3>
+                    <p>Character collars, harnesses and everyday dog gear.</p>
+                    <span>Dog Brand</span>
+                </a>
+                <a href="#shop-all-products" class="brand-logo" data-catalog-group="dog" data-catalog-search="Marvel">
+                    <img src="assets/images/brands/marvel.svg" alt="Marvel logo" loading="lazy" decoding="async">
+                    <h3>Marvel</h3>
+                    <p>Bold bowls, collars and puppy starter picks.</p>
+                    <span>Dog Brand</span>
+                </a>
+                <a href="#shop-all-products" class="brand-logo brand-logo-dark" data-catalog-group="cat" data-catalog-search="Ancol">
+                    <img src="assets/images/brands/ancol.png" alt="Ancol logo" loading="lazy" decoding="async">
+                    <h3>Ancol</h3>
+                    <p>Cat collars, bells and everyday accessories.</p>
+                    <span>Cat Brand</span>
+                </a>
+                <a href="#shop-all-products" class="brand-logo" data-catalog-group="cat" data-catalog-search="IAMS">
+                    <img src="assets/images/brands/iams.svg" alt="IAMS logo" loading="lazy" decoding="async">
+                    <h3>IAMS</h3>
+                    <p>Premium cat food in practical pantry sizes.</p>
+                    <span>Cat Brand</span>
+                </a>
+                <a href="#shop-all-products" class="brand-logo" data-catalog-group="cat" data-catalog-search="GO-CAT">
+                    <img src="assets/images/brands/go-cat.png" alt="GO-CAT logo" loading="lazy" decoding="async">
+                    <h3>GO-CAT</h3>
+                    <p>Popular dry food staples for daily feeding.</p>
+                    <span>Cat Brand</span>
+                </a>
+                <a href="#shop-all-products" class="brand-logo brand-logo-dark" data-catalog-group="cat" data-catalog-search="Danish Design">
+                    <img src="assets/images/brands/danish-design.png" alt="Danish Design logo" loading="lazy" decoding="async">
+                    <h3>Danish Design</h3>
+                    <p>Cosy beds and comfort-led cat favourites.</p>
+                    <span>Cat Brand</span>
+                </a>
             </div>
         </div>
     </section>
@@ -2138,6 +2170,9 @@
         </div>
     </footer>
 
+    <script defer src="assets/js/index-shop-catalog.js"></script>
+    <script defer src="assets/js/featured-products.js"></script>
+    <script defer src="assets/js/new-arrivals.js"></script>
     <script>
         // Page Navigation
         document.addEventListener('DOMContentLoaded', function() {

@@ -2,27 +2,27 @@
 <!-- TODO: Replace SITE_URL placeholder with production domain before launch. -->
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://SITE_URL_TODO/</loc>
+    <loc>https://ecoprintinnovations.github.io/Tiny-Tails/</loc>
   </url>
   <url>
-    <loc>https://SITE_URL_TODO/pages/home.html</loc>
+    <loc>https://ecoprintinnovations.github.io/Tiny-Tails/pages/home.html</loc>
   </url>
   <url>
-    <loc>https://SITE_URL_TODO/pages/about.html</loc>
+    <loc>https://ecoprintinnovations.github.io/Tiny-Tails/pages/about.html</loc>
   </url>
   <url>
-    <loc>https://SITE_URL_TODO/pages/services.html</loc>
+    <loc>https://ecoprintinnovations.github.io/Tiny-Tails/pages/services.html</loc>
   </url>
   <url>
-    <loc>https://SITE_URL_TODO/pages/shop.html</loc>
+    <loc>https://ecoprintinnovations.github.io/Tiny-Tails/pages/shop.html</loc>
   </url>
   <url>
-    <loc>https://SITE_URL_TODO/pages/gallery.html</loc>
+    <loc>https://ecoprintinnovations.github.io/Tiny-Tails/pages/gallery.html</loc>
   </url>
   <url>
-    <loc>https://SITE_URL_TODO/pages/blog.html</loc>
+    <loc>https://ecoprintinnovations.github.io/Tiny-Tails/pages/blog.html</loc>
   </url>
   <url>
-    <loc>https://SITE_URL_TODO/pages/contact.html</loc>
+    <loc>https://ecoprintinnovations.github.io/Tiny-Tails/pages/contact.html</loc>
   </url>
 </urlset>
